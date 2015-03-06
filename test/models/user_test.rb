@@ -62,9 +62,16 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.valid?
   end
 
-
   test "password should have a minimum length" do
     @user.password = @user.password_confirmation = "a" * 7
     assert_not @user.valid?
+  end
+
+  test "associated ideas should be destroyed" do
+    @user.save
+    @user.ideas.create!(title: "New Idea", content: "Blah blah")
+    assert_difference 'Idea.count', -1 do
+      @user.destroy
+    end
   end
 end

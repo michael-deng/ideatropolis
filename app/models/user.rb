@@ -1,8 +1,11 @@
 class User < ActiveRecord::Base
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  has_many :ideas, dependent: :destroy
 
   before_save { self.email = email.downcase }
 
@@ -10,6 +13,5 @@ class User < ActiveRecord::Base
   validates :email, presence: true, length: { maximum: 255 },
   									format: { with: VALID_EMAIL_REGEX }
   validates :name, presence: true, length: { maximum: 50 }
-
-  has_many :ideas, dependent: :destroy
+  
 end
