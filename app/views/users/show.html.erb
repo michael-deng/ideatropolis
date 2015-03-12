@@ -1,5 +1,19 @@
 <% provide(:title, @user.name) %>
-<h1>
-  <%= gravatar_for @user %>
-  <%= @user.name %>
-</h1>
+
+<div class="row">
+  <div class="col-md-4">
+    <section class="user-info">
+      <%= gravatar_for @user %>
+      <br />
+      <%= @user.name %>
+      <br />
+      <%= link_to "Edit Profile", edit_user_registration_path(current_user) %>
+    </section>
+  </div>
+
+  <div class="col-md-8">
+  	<ol class="user-ideas">
+      <%= render @ideas %>
+  	</ol>
+  </div>
+</div>
