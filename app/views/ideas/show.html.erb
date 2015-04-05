@@ -1,3 +1,7 @@
 <% provide(:title, @idea.title) %>
-@idea.title
-@idea.content
+
+<li class="idea-entry" id="idea-<%= @idea.id %>">
+	<span class="title" style="font-size:200%;"><%= @idea.title %></span>
+	<br />
+	<span class="content"><%= @idea.content %></span>
+</li>

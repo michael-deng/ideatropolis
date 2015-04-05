@@ -1,5 +1,5 @@
 <li class="idea-entry" id="idea-<%= idea.id %>">
-  <span class="title"><%= idea.title %></span>
+  <span class="title"><%= link_to idea.title, idea_path(idea) %></span>
   <br />
   <%= link_to gravatar_for(idea.user), idea.user %>
   <span class="user"><%= link_to idea.user.name, idea.user %></span>
