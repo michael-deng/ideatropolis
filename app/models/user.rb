@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :ideas, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   before_save { self.email = email.downcase }
 
