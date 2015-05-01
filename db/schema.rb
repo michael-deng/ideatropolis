@@ -47,10 +47,17 @@ ActiveRecord::Schema.define(version: 20150405014455) do
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
 
   create_table "comments", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "idea_id"
     t.text     "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "comments", ["idea_id", "created_at"], name: "index_comments_on_idea_id_and_created_at"
+  add_index "comments", ["idea_id"], name: "index_comments_on_idea_id"
+  add_index "comments", ["user_id", "created_at"], name: "index_comments_on_user_id_and_created_at"
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id"
 
   create_table "ideas", force: :cascade do |t|
     t.integer  "user_id"

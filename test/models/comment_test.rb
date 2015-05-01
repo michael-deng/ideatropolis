@@ -6,7 +6,9 @@ class CommentTest < ActiveSupport::TestCase
   	@user = User.new(email: "example2@gmail.com", name: "Michael D", password: "password", password_confirmation: "password")
     @user.save
   	@idea = @user.ideas.build(title: "New Idea", content: "Blah blah")
+    @idea.save
   	@comment = @idea.comments.build(content: "New content")
+    @comment.user_id = @idea.user_id
   end
 
   test "should be valid" do

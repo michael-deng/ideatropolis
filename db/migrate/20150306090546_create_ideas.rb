@@ -7,5 +7,6 @@ class CreateIdeas < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+    add_index :ideas, [:user_id, :created_at]
   end
 end
