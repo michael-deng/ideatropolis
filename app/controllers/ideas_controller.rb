@@ -1,5 +1,7 @@
 class IdeasController < ApplicationController
 
+	before_action :authenticate_user!, only: [:show, :index]
+
 	def show
 		@idea = Idea.find(params[:id])
 		@comments = @idea.comments

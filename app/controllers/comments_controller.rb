@@ -1,5 +1,7 @@
 class CommentsController < ApplicationController
 
+	before_action :authenticate_user!, only: [:create, :destroy]
+
 	def create
 		@comment = @idea.comments.build(comment_params)
 		@comment.active = current_active

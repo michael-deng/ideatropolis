@@ -6,10 +6,8 @@
 	<span class="content"><%= @idea.content %></span>
 </li>
 
-<% if user_signed_in? %>
-	<%= form_for(@comment) do |f| %>
-	  <%= f.text_area :content, placeholder: "Compose new comment..." %>
-	  <br />
-	  <%= f.submit "Create my account", class: "btn btn-sm" %>
-	<% end %>
+<%= form_for(@comment) do |f| %>
+  <%= f.text_area :content, placeholder: "Compose new comment..." %>
+  <br />
+  <%= f.submit "Post Comment", class: "btn btn-sm" %>
 <% end %>
