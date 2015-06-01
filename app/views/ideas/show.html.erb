@@ -1,13 +1,23 @@
 <% provide(:title, @idea.title) %>
 
 <li class="idea-entry" id="idea-<%= @idea.id %>">
-	<span class="title" style="font-size:200%;"><%= @idea.title %></span>
-	<br />
-	<span class="content"><%= @idea.content %></span>
+  <span class="title" style="font-size:200%"><%= @idea.title %></span>
+  <br />
+  <%= link_to gravatar_for(@idea.user), @idea.user %>
+  <span class="user"><%= link_to @idea.user.name, @idea.user %></span>
+  <span class="timestamp">
+    posted <%= time_ago_in_words(@idea.created_at) %> ago.
+  </span>
+  <br />
+  <span class="content"><%= @idea.content %></span>
+  <br />
+  <hr>
 </li>
 
-<%= form_for(@comment) do |f| %>
+<%= form_for([@idea, @comment]) do |f| %>
   <%= f.text_area :content, placeholder: "Compose new comment..." %>
   <br />
   <%= f.submit "Post Comment", class: "btn btn-sm" %>
 <% end %>
+
+<%= render @comments %>

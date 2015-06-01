@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :users, only: [:index, :show]
-  resources :ideas
-  resources :comments, only: [:create, :destroy]
+  resources :ideas do
+  	resources :comments, only: [:create, :destroy]
+  end
 
 
 
