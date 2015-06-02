@@ -1,0 +1,8 @@
+<% provide(:title, "Edit Comment") %>
+
+<%= form_for([@idea, @comment]) do |f| %>
+	<%= render 'shared/error_messages', object: f.object %>
+  <%= f.text_area :content, placeholder: @comment.content %>
+  <br />
+  <%= f.submit "Update Comment", class: "btn btn-sm" %>
+<% end %>

@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
 
-	before_action :authenticate_user!, only: [:create, :destroy]
+	before_action :authenticate_user!, only: [:create, :edit, :update, :destroy]
 
 	def create
 		@idea = Idea.find(params[:idea_id])
@@ -15,9 +15,26 @@ class CommentsController < ApplicationController
 		end
 	end
 
+	def edit
+		@idea = Idea.find(params[:idea_id])
+		@comment = Comment.find(params[:id])
+	end
+
+	def update
+		@comment = Comment.find(params[:id])
+		if @comment.update_attributes(comment_params)
+      flash[:success] = "Comment updated"
+      redirect_to @comment.idea
+    else
+      render 'edit'
+    end
+  end
+
 	def destroy
+		@comment = current_user.comments.find_by(id: params[:id])
 		@idea = @comment.idea
 		@comment.destroy
+		flash[:success] = "Comment deleted"
 		redirect_to @idea
 	end
 

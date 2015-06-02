@@ -13,6 +13,8 @@
   <br />
   <% if current_user == @idea.user %>
     <%= link_to "Edit", edit_idea_path(@idea) %>
+    <%= link_to "Delete", @idea, method: :delete,
+                                       data: { confirm: "You sure?" } %>
   <% end %>
   <hr>
 </li>

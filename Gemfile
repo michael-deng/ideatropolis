@@ -14,6 +14,7 @@ gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
 gem 'sunspot_rails'
 gem 'sunspot_solr'
+gem 'best_in_place', github: 'bernat/best_in_place'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'

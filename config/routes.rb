@@ -6,10 +6,8 @@ Rails.application.routes.draw do
 
   resources :users, only: [:index, :show]
   resources :ideas do
-  	resources :comments, only: [:create, :destroy]
+  	resources :comments, only: [:create, :edit, :update, :destroy]
   end
-
-
 
   root "static_pages#home"
 
