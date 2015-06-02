@@ -1,6 +1,6 @@
 class IdeasController < ApplicationController
 
-	before_action :authenticate_user!, only: [:show, :index]
+	before_action :authenticate_user!, only: [:new, :create, :edit, :update, :show, :index]
 
 	def new
 		@idea = Idea.new
@@ -16,6 +16,21 @@ class IdeasController < ApplicationController
 			redirect_to new_idea_path
 		end
 	end
+
+	def edit
+		@idea = Idea.find(params[:id])
+	end
+
+	def update
+		@idea = Idea.find(params[:id])
+		if @idea.update_attributes(idea_params)
+      flash[:success] = "Idea updated"
+      redirect_to @idea
+    else
+      render 'edit'
+    end
+  end
+
 
 	def show
 		@idea = Idea.find(params[:id])

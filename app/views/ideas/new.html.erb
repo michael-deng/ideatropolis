@@ -1,6 +1,7 @@
 <% provide(:title, "New Idea") %>
 
 <%= form_for(@idea) do |f| %>
+	<%= render 'shared/error_messages', object: f.object %>
 	<%= f.text_field :title, placeholder: "Compose title..." %>
 	<br />
   <%= f.text_area :content, placeholder: "Compose new idea..." %>

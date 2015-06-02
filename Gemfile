@@ -12,7 +12,8 @@ gem 'jbuilder',             '2.2.3'
 gem 'sdoc',                 '0.4.0', group: :doc
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
-
+gem 'sunspot_rails'
+gem 'sunspot_solr'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
