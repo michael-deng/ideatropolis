@@ -2,13 +2,17 @@ class IdeasController < ApplicationController
 
 	before_action :authenticate_user!, only: [:show, :index]
 
+	def new
+		@idea = Idea.new
+	end
+
 	def create
 		@idea = current_user.ideas.build(idea_params)
 		if @idea.save
-			flash[:success] = "Comment created!"
+			flash[:success] = "Idea created!"
 			redirect_to @idea
 		else
-			flash[:error] = "There was an error with your comment. Please try again."
+			flash[:error] = "There was an error with your idea. Please try again."
 			redirect_to new_idea_path
 		end
 	end

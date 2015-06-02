@@ -5,7 +5,14 @@ RSpec.describe Comment, type: :model do
   	expect(build(:comment)).to be_valid
   end
 
-  it "is invalid without content" do
-  	expect(build(:comment, content: nil)).to_not be_valid
+  it { should belong_to(:user) }
+  it { should belong_to(:idea) }
+
+  it { should validate_presence_of(:content) }
+  it { should validate_presence_of(:user_id) }
+  it { should validate_presence_of(:idea_id) }
+
+  it "is invalid if content exceeds 140 letters" do
+  	expect(build(:comment, content: "a"*141)).to_not be_valid
   end
 end

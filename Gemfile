@@ -13,6 +13,7 @@ gem 'sdoc',                 '0.4.0', group: :doc
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
 
+
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
   gem 'byebug',      '3.4.0'
@@ -20,6 +21,7 @@ group :development, :test do
   gem 'spring',      '1.1.3'
   gem "better_errors"
   gem 'rspec-rails', '~> 3.0'
+  gem 'shoulda-matchers'
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'database_cleaner'

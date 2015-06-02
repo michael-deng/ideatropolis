@@ -5,16 +5,15 @@ RSpec.describe User, type: :model do
 		expect(build(:user)).to be_valid
 	end
 
-  it "is invalid without a name" do
-  	expect(build(:user, name: nil)).to_not be_valid
-  end
+  it { should have_many(:ideas) }
+  it { should have_many(:comments) }
+
+  it { should validate_presence_of(:name) }
+  it { should validate_presence_of(:email) }
+  it { should validate_presence_of(:password) }
 
   it "is invalid if name exceeds 50 letters" do
   	expect(build(:user, name: "a"*51)).to_not be_valid
-  end
-
-  it "is invalid without an email" do
-  	expect(build(:user, email: nil)).to_not be_valid
   end
 
   it "is invalid if email exceeds 256 letters" do
@@ -48,10 +47,6 @@ RSpec.describe User, type: :model do
   	mixed_case_email = "Foo@ExAMPle.CoM"
   	user = create(:user, email: mixed_case_email)
   	expect(user.reload.email).to be == mixed_case_email.downcase
-  end
-
-  it "is invalid without password" do
-  	expect(build(:user, password: nil)).to_not be_valid
   end
 
   it "is invalid if password has less than 8 letters" do
