@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
 
-	before_action :authenticate_user!, only: [:create, :edit, :update, :destroy]
+	before_action :authenticate_user!
+	before_create :create_notification
 
 	def create
 		@idea = Idea.find(params[:idea_id])
@@ -46,5 +47,16 @@ class CommentsController < ApplicationController
 
 		def comment_params
 			params.require(:comment).permit(:content)
+		end
+
+		def create_notification
+			@idea = Idea.find_by(self.idea_id)
+			@user = User.find_by(@idea.user_id)
+			Notification.create(
+				user_id: @user.id,
+				idea_id: @idea.id,
+				comment_id: self.id,
+				read: false
+			)
 		end
 end
