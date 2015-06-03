@@ -24,7 +24,7 @@ class IdeasController < ApplicationController
 	def update
 		@idea = Idea.find(params[:id])
 		if @idea.update_attributes(idea_params)
-      flash[:success] = "Idea updated"
+      flash[:success] = "Idea updated!"
       redirect_to @idea
     else
       render 'edit'
@@ -35,10 +35,9 @@ class IdeasController < ApplicationController
   	@idea = current_user.ideas.find_by(id: params[:id])
   	redirect_to root_path if @idea.nil?
   	@idea.destroy
-  	flash[:success] = "Idea deleted"
+  	flash[:success] = "Idea deleted!"
   	redirect_to ideas_path
   end
-
 
 	def show
 		@idea = Idea.find(params[:id])
@@ -47,7 +46,10 @@ class IdeasController < ApplicationController
 	end
 
 	def index
-		@ideas = Idea.all
+		@search = Idea.solr_search do
+			fulltext params[:search]
+		end
+		@ideas = @search.results
 	end
 
 	private

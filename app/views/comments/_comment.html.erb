@@ -1,14 +1,14 @@
-<li class="comment-entry" id="<%= dom_id comment %>">
+<li class="comment-entry" id="comment-<%= comment.id %>">
   <%= link_to gravatar_for(comment.user), comment.user %>
   <span class="user"><%= link_to comment.user.name, comment.user %></span>
   <span class="timestamp">
     posted <%= time_ago_in_words(comment.created_at) %> ago.
   </span>
   <br />
-  <span class="content"><%= best_in_place comment, :content, :as => :textarea, :path => idea_comment_path(comment.idea, comment) %></span>
+  <span class="content"><%= best_in_place comment, :content, :as => :textarea, :activator => "#activator-#{comment.id}", :url => idea_comment_path(comment.idea, comment) %></span>
   <br />
   <% if current_user == comment.user %>
-    <%= link_to "Edit", edit_idea_comment_path(comment.idea, comment) %>
+    <a href='#' id="activator-<%= comment.id %>">Edit</a>
     <%= link_to "Delete", [comment.idea, comment], method: :delete,
                                        data: { confirm: "You sure?" } %>
   <% end %>

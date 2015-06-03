@@ -22,19 +22,23 @@ class CommentsController < ApplicationController
 
 	def update
 		@comment = Comment.find(params[:id])
-		if @comment.update_attributes(comment_params)
-      flash[:success] = "Comment updated"
-      redirect_to @comment.idea
-    else
-      render 'edit'
-    end
-  end
+		respond_to do |format|
+	    if @comment.update_attributes(comment_params)
+	      format.html { redirect_to(@comment, :notice => 'Comment was successfully updated.') }
+	      format.json { respond_with_bip(@comment) }
+	    else
+	      format.html { render :action => "edit" }
+	      format.json { respond_with_bip(@comment) }
+	    end
+	  end
+	end
+		
 
 	def destroy
 		@comment = current_user.comments.find_by(id: params[:id])
 		@idea = @comment.idea
 		@comment.destroy
-		flash[:success] = "Comment deleted"
+		flash[:success] = "Comment deleted!"
 		redirect_to @idea
 	end
 
