@@ -1,18 +1,23 @@
 class CommentsController < ApplicationController
 
 	before_action :authenticate_user!
-	before_create :create_notification
 
 	def create
 		@idea = Idea.find(params[:idea_id])
 		@comment = @idea.comments.build(comment_params)
 		@comment.user = current_user
 		if @comment.save
+			Notification.create(
+				user_id: @idea.user_id,
+				idea_id: @idea.id,
+				comment_id: @comment.id,
+				read: false
+			)
 			flash[:success] = "Comment created!"
-			redirect_to @comment.idea
+			redirect_to @idea
 		else
 			flash[:error] = "There was an error with your comment. Please try again."
-			redirect_to @comment.idea
+			redirect_to @idea
 		end
 	end
 
@@ -34,7 +39,6 @@ class CommentsController < ApplicationController
 	  end
 	end
 		
-
 	def destroy
 		@comment = current_user.comments.find_by(id: params[:id])
 		@idea = @comment.idea
@@ -47,16 +51,5 @@ class CommentsController < ApplicationController
 
 		def comment_params
 			params.require(:comment).permit(:content)
-		end
-
-		def create_notification
-			@idea = Idea.find_by(self.idea_id)
-			@user = User.find_by(@idea.user_id)
-			Notification.create(
-				user_id: @user.id,
-				idea_id: @idea.id,
-				comment_id: self.id,
-				read: false
-			)
 		end
 end

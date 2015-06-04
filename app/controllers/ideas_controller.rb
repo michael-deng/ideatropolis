@@ -13,7 +13,7 @@ class IdeasController < ApplicationController
 			redirect_to @idea
 		else
 			flash[:error] = "There was an error with your idea. Please try again."
-			redirect_to new_idea_path
+			render 'new'
 		end
 	end
 

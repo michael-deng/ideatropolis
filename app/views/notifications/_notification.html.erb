@@ -1,0 +1,13 @@
+<li class="notification-entry" id="notification-<%= notification.id %>">
+  <span class="title"><%= link_to notification.title, notification_path(notification) %></span>
+  <br />
+  <%= link_to gravatar_for(notification.user), notification.user %>
+  <span class="user"><%= link_to notification.user.name, notification.user %></span>
+  <span class="timestamp">
+    posted <%= time_ago_in_words(notification.created_at) %> ago.
+  </span>
+  <br />
+  <span class="content"><%= notification.content %></span>
+  <br />
+  <hr>
+</li>
