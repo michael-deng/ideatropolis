@@ -31,6 +31,9 @@ RSpec.configure do |config|
   # then all factory_girl methods will need to be prefaced with FactoryGirl.
   config.include FactoryGirl::Syntax::Methods
 
+  # Devise includes some test helpers for functional specs.
+  config.include Devise::TestHelpers, type: :controller
+
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
