@@ -1,0 +1,9 @@
+<li class="notification-entry" id="notification-<%= notification.id %>">
+	<%= link_to idea_path(notification.idea, anchor: "comment-#{notification.comment_id}") do %>
+		<hr>
+	  <%= gravatar_for(notification.user) %>
+	  <span class="content"><%= notification.content %></span>
+	  <br />
+	  <span class="timestamp"><%= time_ago_in_words(notification.created_at) %> ago</span>
+  <% end %>
+</li>

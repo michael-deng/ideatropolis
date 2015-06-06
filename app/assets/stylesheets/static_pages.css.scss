@@ -2,8 +2,32 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.navbar .container-fluid {
-	width: 1130px;
+body {
+	width: 100%;
+}
+
+/*** Notifications Dropdown Menu ***/
+
+.dropdown .dropdown-menu {
+	width: 360px;
+	text-decoration: none;
+}
+
+.dropdown .dropdown-menu .dropdown-heading {
+	padding: 1px 10px 3px 10px;
+}
+
+.dropdown .dropdown-menu li a {
+	padding: 0 10px 10px 10px;
+}
+
+.dropdown .dropdown-menu .notification-entry hr {
+	margin: 0 -10px 10px -10px;
+}
+
+.dropdown .dropdown-menu .notification-entry a {
+	text-decoration: none;
+	font-size: 1em;
 }
 
 .searchbar {

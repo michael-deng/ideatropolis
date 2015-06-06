@@ -11,6 +11,7 @@ class CommentsController < ApplicationController
 				user_id: @idea.user_id,
 				idea_id: @idea.id,
 				comment_id: @comment.id,
+				content: @idea.user.name + " posted a comment on your idea.",
 				read: false
 			)
 			flash[:success] = "Comment created!"

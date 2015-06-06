@@ -74,6 +74,7 @@ ActiveRecord::Schema.define(version: 20150603173746) do
     t.integer  "user_id"
     t.integer  "idea_id"
     t.integer  "comment_id"
+    t.text     "content"
     t.boolean  "read"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -81,6 +82,7 @@ ActiveRecord::Schema.define(version: 20150603173746) do
 
   add_index "notifications", ["comment_id"], name: "index_notifications_on_comment_id"
   add_index "notifications", ["idea_id"], name: "index_notifications_on_idea_id"
+  add_index "notifications", ["user_id", "created_at"], name: "index_notifications_on_user_id_and_created_at"
   add_index "notifications", ["user_id"], name: "index_notifications_on_user_id"
 
   create_table "users", force: :cascade do |t|

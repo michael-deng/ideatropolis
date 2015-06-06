@@ -4,12 +4,24 @@
       <% if user_signed_in? %>
         <li class="searchbar">
           <%= form_tag ideas_path, :method => :get do %>
-            <%= text_field_tag :search, params[:search] %>
-            <%= submit_tag "Search", :name => nil %>
-          <% end %>
+          <%= text_field_tag :search, params[:search] %>
+          <%= submit_tag "Search", :name => nil %>
         </li>
         <li><%= link_to "Post an Idea", new_idea_path %></li>
         <li><%= link_to "Profile", user_path(current_user) %></li>
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Notifications</a>
+          <ul class="dropdown-menu" role="menu">
+            <% @notifications = current_user.notifications.last(5).reverse %>
+              <% if @notifications.any? %>
+                <li class="dropdown-heading">Notifications</li>
+                <%= render @notifications %>
+              <% else %>
+                <li class="dropdown-heading">No new notifications</li>
+              <% end %>
+            <% end %>
+          </ul>
+        </li>
         <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
       <% else %>
         <li><%= link_to "Sign In", new_user_session_path %></li>
