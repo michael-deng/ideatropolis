@@ -6,31 +6,36 @@ body {
 	width: 100%;
 }
 
-/*** Notifications Dropdown Menu ***/
 
-.dropdown .dropdown-menu {
-	width: 360px;
-	text-decoration: none;
-}
 
-.dropdown .dropdown-menu .dropdown-heading {
-	padding: 1px 10px 3px 10px;
-}
-
-.dropdown .dropdown-menu li a {
-	padding: 0 10px 10px 10px;
-}
-
-.dropdown .dropdown-menu .notification-entry hr {
-	margin: 0 -10px 10px -10px;
-}
-
-.dropdown .dropdown-menu .notification-entry a {
-	text-decoration: none;
-	font-size: 1em;
-}
+/** Search **/
 
 .searchbar {
 	top: 6px;
 	width: 25em;
 }
+
+
+
+/** Notifications Dropdown Menu **/
+
+.dropdown .dropdown-menu {
+	width: 360px;
+	text-decoration: none;
+	padding: 0;
+}
+
+.dropdown .dropdown-menu li a {
+	padding: 10px 10px 0 10px;
+	text-decoration: none;
+	font-size: 1em;
+}
+
+.dropdown .dropdown-menu .notification-entry hr {
+	margin: 10px -10px 0 -10px;
+}
+
+.dropdown .dropdown-menu .dropdown-caption a {
+	padding-bottom: 10px;
+}
+

@@ -1,3 +1,7 @@
 <% provide(:title, "My Notifications") %>
 
-<%= render @notifications %>
+<% if @notifications.any? %>
+	<%= render @notifications %>
+<% else %>
+	<div class="no-notifications">You don't have any notifications.</div>
+<% end %>

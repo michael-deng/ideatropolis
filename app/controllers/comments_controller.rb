@@ -7,13 +7,15 @@ class CommentsController < ApplicationController
 		@comment = @idea.comments.build(comment_params)
 		@comment.user = current_user
 		if @comment.save
-			Notification.create(
-				user_id: @idea.user_id,
-				idea_id: @idea.id,
-				comment_id: @comment.id,
-				content: @idea.user.name + " posted a comment on your idea.",
-				read: false
-			)
+			if @comment.user != current_user
+				Notification.create(
+					user_id: @idea.user_id,
+					idea_id: @idea.id,
+					comment_id: @comment.id,
+					content: @idea.user.name + " posted a comment on your idea.",
+					read: false
+				)
+			end
 			flash[:success] = "Comment created!"
 			redirect_to @idea
 		else

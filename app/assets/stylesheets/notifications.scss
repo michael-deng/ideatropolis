@@ -2,7 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.notification-entry {
+	list-style-type: none;
+	line-height: 200%;
+}
 
-.notification-entry hr {
-	margin: 0 -10px 10px -10px;
+.notification-entry a {
+	text-decoration: none;
+	color: black;
+}
+
+.no-notifications {
+	font-size: 1.5em;
+	text-align: center;
+	width: 100%;
+	margin-top: 50px;
 }
