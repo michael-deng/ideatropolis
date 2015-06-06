@@ -2,40 +2,5 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-	width: 100%;
-}
 
-
-
-/** Search **/
-
-.searchbar {
-	top: 6px;
-	width: 25em;
-}
-
-
-
-/** Notifications Dropdown Menu **/
-
-.dropdown .dropdown-menu {
-	width: 360px;
-	text-decoration: none;
-	padding: 0;
-}
-
-.dropdown .dropdown-menu li a {
-	padding: 10px 10px 0 10px;
-	text-decoration: none;
-	font-size: 1em;
-}
-
-.dropdown .dropdown-menu .notification-entry hr {
-	margin: 10px -10px 0 -10px;
-}
-
-.dropdown .dropdown-menu .dropdown-caption a {
-	padding-bottom: 10px;
-}
 

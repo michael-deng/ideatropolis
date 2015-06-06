@@ -1,0 +1,46 @@
+body {
+	width: 100%;
+}
+
+.center-content {
+	width: 1107px;
+	margin: auto;
+}
+
+.navbar {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+
+
+/** Search **/
+
+.searchbar {
+	top: 6px;
+	width: 25em;
+}
+
+
+
+/** Notifications Dropdown Menu **/
+
+.dropdown .dropdown-menu {
+	width: 360px;
+	text-decoration: none;
+	padding: 0;
+}
+
+.dropdown .dropdown-menu li a {
+	padding: 10px 10px 0 10px;
+	text-decoration: none;
+	font-size: 1em;
+}
+
+.dropdown .dropdown-menu .notification-entry hr {
+	margin: 10px -10px 0 -10px;
+}
+
+.dropdown .dropdown-menu .dropdown-caption a {
+	padding-bottom: 10px;
+}
