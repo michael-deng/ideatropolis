@@ -1,9 +1,10 @@
-FactoryGirl.define do
-  factory :notification do
-    user nil
-idea nil
-comment nil
-read false
-  end
+require 'faker'
 
+FactoryGirl.define do
+	factory :notification do
+    content { "Michael Deng posted a comment" }
+    user
+    idea
+    comment
+  end
 end

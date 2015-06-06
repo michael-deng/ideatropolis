@@ -46,10 +46,14 @@ class IdeasController < ApplicationController
 	end
 
 	def index
-		@search = Idea.solr_search do
-			fulltext params[:search]
+		if params[:search].blank?
+			@ideas = Idea.all
+		else
+			@search = Idea.solr_search do
+				fulltext params[:search]
+			end
+			@ideas = @search.results
 		end
-		@ideas = @search.results
 	end
 
 	private

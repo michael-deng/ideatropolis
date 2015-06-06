@@ -15,6 +15,8 @@ gem 'activeadmin', github: 'activeadmin'
 gem 'sunspot_rails'
 gem 'sunspot_solr'
 gem 'best_in_place', github: 'bernat/best_in_place'
+gem 'omniauth-facebook'
+gem 'rename'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
@@ -35,7 +37,7 @@ group :test do
   gem 'mini_backtrace',     '0.1.3'
   gem 'guard-minitest',     '2.3.1'
   gem 'faker',                '1.4.2'
-  gem 'guard-rspec' 
+  gem 'guard-rspec'
   gem 'launchy'
 end
 
