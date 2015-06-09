@@ -2,9 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/*** SHOW ***/
+
+
+/** Sign up and sign in **/
+
+.signupsignin {
+	height: 100%;
+	width: 100%;
+}
+
+.signupsignin form {
+	width: 30em;
+}
+
+
+/** Show **/
 
 .user-info {
 	font-size: 120%;
 	line-height: 150%;
 }
+
