@@ -17,6 +17,7 @@ gem 'sunspot_solr'
 gem 'best_in_place', github: 'bernat/best_in_place'
 gem 'omniauth-facebook'
 gem 'rename'
+gem 'figaro'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
