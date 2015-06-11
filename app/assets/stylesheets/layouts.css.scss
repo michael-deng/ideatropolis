@@ -21,6 +21,12 @@ body .navbar {
 	padding-right: 2em;
 }
 
+form input {
+	margin-bottom: 0.5em;
+}
+
+
+
 /** Logo **/
 
 body .navbar .navbar-left li a {
@@ -29,6 +35,21 @@ body .navbar .navbar-left li a {
 	font-size: 1.5em;
 	font-weight: 700;
 }
+
+body .navbar .navbar-left li a:hover {
+	color: #00AF33;
+}
+
+
+
+/** Navbar buttons **/
+
+.navbar .navbar-right li a {
+	text-decoration: none;
+}
+
+
+
 
 
 
