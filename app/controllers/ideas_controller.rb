@@ -12,7 +12,7 @@ class IdeasController < ApplicationController
 			flash[:success] = "Idea created!"
 			redirect_to @idea
 		else
-			flash[:error] = "There was an error with your idea. Please try again."
+			flash.now[:error] = "There was an error with your idea. Please try again."
 			render 'new'
 		end
 	end
@@ -27,6 +27,7 @@ class IdeasController < ApplicationController
       flash[:success] = "Idea updated!"
       redirect_to @idea
     else
+    	flash.now[:error] = "There was an error with your update. Please try again."
       render 'edit'
     end
   end

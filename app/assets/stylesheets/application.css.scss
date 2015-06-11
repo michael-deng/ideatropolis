@@ -43,3 +43,19 @@
 @media (max-width: 480px) {
   body{font-size:8px;}
 }
+
+
+
+/* Flash messages */
+
+.alert-notice {
+	background: #CCEBCC;
+	color: #006B24;
+	border: 0.5px solid #80CC80;
+}
+
+.alert-alert, .alert-error {
+	background: #E6CCCC;
+	color: #8D1919;
+	border: 0.5px solid #C08080;
+}

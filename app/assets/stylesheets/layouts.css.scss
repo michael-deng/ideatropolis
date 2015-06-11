@@ -1,7 +1,6 @@
 html {
 	height: 100%;
 	width: 100%;
-	min-width: 800px;
 }
 
 body {
@@ -12,8 +11,8 @@ body {
 .center-content {
 	height: 100%;
 	width: 100%;
-	padding-left: 2em;
-	padding-right: 2em;
+	padding-left: 10%;
+	padding-right: 10%;
 }
 
 
@@ -27,8 +26,13 @@ body .navbar {
 /** Search **/
 
 .searchbar {
-	top: 6px;
-	width: 25em;
+	margin-top: 7px;
+	margin-bottom: 7px;
+	width: 21em;
+}
+
+.searchbar #search {
+	width: 15em;
 }
 
 
