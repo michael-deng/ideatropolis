@@ -2,10 +2,19 @@
 
 <%= form_for(@idea) do |f| %>
 	<%= render 'shared/error_messages', object: f.object %>
-	<br />
-	<%= f.text_field :title, placeholder: "Compose title..." %>
-	<br />
-  <%= f.text_area :content, placeholder: "Compose new idea..." %>
-  <br />
-  <%= f.submit "Post Idea", class: "btn btn-sm" %>
+
+	<div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_area :content, rows: "10" %>
+  </div>
+	
+	<div class="actions">
+    <%= f.submit "Post Idea" %>
+  </div>
+  
 <% end %>
