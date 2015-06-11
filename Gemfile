@@ -18,6 +18,7 @@ gem 'best_in_place', github: 'bernat/best_in_place'
 gem 'omniauth-facebook'
 gem 'rename'
 gem 'figaro'
+gem "paperclip", "~> 4.2"
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
