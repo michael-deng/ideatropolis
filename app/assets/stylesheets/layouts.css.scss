@@ -16,10 +16,18 @@ html body {
 	padding-right: 10%;
 }
 
-
 body .navbar {
 	padding-left: 2em;
 	padding-right: 2em;
+}
+
+/** Logo **/
+
+body .navbar .navbar-left li a {
+	text-decoration: none;
+	color: #00AF33;
+	font-size: 1.5em;
+	font-weight: 700;
 }
 
 
