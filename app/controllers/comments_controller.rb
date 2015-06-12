@@ -7,12 +7,12 @@ class CommentsController < ApplicationController
 		@comment = @idea.comments.build(comment_params)
 		@comment.user = current_user
 		if @comment.save
-			if @comment.user != current_user
+			if @idea.user != current_user
 				Notification.create(
 					user_id: @idea.user_id,
 					idea_id: @idea.id,
 					comment_id: @comment.id,
-					content: @idea.user.name + " posted a comment on your idea.",
+					content: current_user.name + " posted a comment on your idea.",
 					read: false
 				)
 			end

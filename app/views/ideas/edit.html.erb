@@ -2,7 +2,18 @@
 
 <%= form_for(@idea) do |f| %>
 	<%= render 'shared/error_messages', object: f.object %>
-	<%= f.text_field :title, placeholder: @idea.title %>
-  <%= f.text_area :content, placeholder: @idea.content %>
-  <%= f.submit "Update Idea", class: "btn btn-sm" %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title, autofocus: true, placeholder: @idea.title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_area :content, rows: "10", placeholder: @idea.content %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Update Idea" %>
+  </div>
 <% end %>
