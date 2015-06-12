@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
                           :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
                         }
   validates_attachment :avatar, 
-                        :content_type => /\Aimage\/.*\Z/, 
+                        :content_type => { :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"] },
                         :size => { :in => 0..1.megabytes }
 
   has_many :ideas, dependent: :destroy
