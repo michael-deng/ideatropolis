@@ -19,6 +19,7 @@ gem 'omniauth-facebook'
 gem 'rename'
 gem 'figaro'
 gem "paperclip", "~> 4.2"
+gem 'aws-sdk'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
