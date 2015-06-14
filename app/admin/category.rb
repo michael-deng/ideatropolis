@@ -26,5 +26,4 @@ ActiveAdmin.register Category do
     end
     f.actions
   end
-
 end
