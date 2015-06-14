@@ -22,6 +22,7 @@ class User < ActiveRecord::Base
   has_many :ideas, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :notifications, dependent: :destroy
+  has_and_belongs_to_many :categories
 
   before_save { self.email = email.downcase }
 
