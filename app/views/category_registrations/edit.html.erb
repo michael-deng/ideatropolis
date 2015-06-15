@@ -11,14 +11,14 @@
       <label class="category selected">
         <!-- The hidden field tag allows me to deselect and save empty checkboxes -->
         <%= hidden_field_tag "user[category_ids][]", '' %>
-        <%= check_box_tag "user[category_ids][]", category.id, already_selected, :style => 'display: none' %>
+        <%= check_box_tag "user[category_ids][]", category.id, already_selected, :style => 'display: none', class: 'checkbox' %>
         <%= category.name %>
       </label>
     <% else %>
-      <label class="category unselected">
+      <label class="category">
         <!-- The hidden field tag allows me to deselect and save empty checkboxes -->
         <%= hidden_field_tag "user[category_ids][]", '' %>
-        <%= check_box_tag "user[category_ids][]", category.id, already_selected, :style => 'display: none' %>
+        <%= check_box_tag "user[category_ids][]", category.id, already_selected, style: 'display: none', class: 'checkbox'  %>
         <%= category.name %>
       </label>
     <% end %>
@@ -31,17 +31,11 @@
 
 <!-- This script allows me to highlight a category when I click its label and unhighlight a category when I click it again -->
 <script>
-  $("label").click(function(evt) {
-    if ($(this).hasClass("selected")) {
-      console.log("has class selected")
-      $(this).removeClass("selected");
-      $(this).addClass("unselected");
+  $(".checkbox").click(function(evt) {
+    if ($(this).parent().hasClass("selected")) {
+      $(this).parent().removeClass("selected");
     } else {
-      console.log("doesn't have class selected")
-      $(this).removeClass("unselected");
-      $(this).addClass("selected");
+      $(this).parent().addClass("selected");
     }
-    evt.stopPropagation();
-    evt.preventDefault();
   });
 </script>
