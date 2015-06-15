@@ -1,0 +1,2 @@
+module CategoryRegistrationsHelper
+end

@@ -1,4 +1,6 @@
-<h2>Edit User Information</h2>
+<% provide(:title, "Update your info") %>
+
+<h2>Update your info</h2>
 
 <%= form_for @user, url: {action: "update"} do |f| %>
   <%= render 'shared/error_messages', object: f.object %>

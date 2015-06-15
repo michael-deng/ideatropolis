@@ -1,8 +1,8 @@
-class AdditionalRegistrationsController < ApplicationController
-    
-  before_action :authenticate_user!
+class CategoryRegistrationsController < ApplicationController
 
-  def edit
+	before_action :authenticate_user!
+
+	def edit
 		@user = current_user
 	end
 
@@ -17,9 +17,9 @@ class AdditionalRegistrationsController < ApplicationController
     end
   end
 
-  private
+  	private
 
-    def user_params
-      params.require(:user).permit(:name, :email, :avatar)
+  	def user_params
+      params.require(:user).permit(:category_ids => [])
     end
 end

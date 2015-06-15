@@ -1,0 +1,20 @@
+<% provide(:title, "Update your interests") %>
+
+<h2>Update your interests</h2>
+
+<%= form_for @user, url: {action: "update"} do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+
+  <% for category in Category.all %>
+    <div class="category">
+      <!-- The hidden field tag allows me to deselect and save empty checkboxes -->
+      <%= hidden_field_tag "user[category_ids][]", '' %>
+      <%= check_box_tag "user[category_ids][]", category.id, @user.categories.include?(category) %>
+      <%= category.name %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit "Update" %>
+  </div>
+<% end %>
