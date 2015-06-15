@@ -1,6 +1,6 @@
 <% provide(:title, "Settings") %>
 
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<span class="heading">Settings</span>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>

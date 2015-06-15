@@ -5,18 +5,17 @@
     <section class="user-info">
       <%= image_tag @user.avatar.url(:medium) %>
       <br />
-      <span class="name"><%= @user.name %></span>
-      <br />
+      <div class="small-heading"><%= @user.name %></div>
       <% if current_user == @user %>
         <ul>
           <li><%= link_to "Settings", edit_user_registration_path(current_user) %></li>
-          <li><%= link_to "Update your information", edit_additional_registration_path(current_user) %></li>
-          <li><%= link_to "Update your interests", edit_category_registration_path(current_user) %></li>
+          <li><%= link_to "Profile", edit_additional_registration_path(current_user) %></li>
+          <li><%= link_to "Interests", edit_category_registration_path(current_user) %></li>
         </ul>
       <% end %>
       <ul>
         <% for category in @user.categories %>
-          <span><%= category.name %></span>
+          <li><span><%= category.name %></span></li>
         <% end %>
       </ul>
     </section>
