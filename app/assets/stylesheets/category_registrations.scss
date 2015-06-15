@@ -1,3 +1,24 @@
 // Place all the styles related to the category_registrations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.category {
+	padding: 3px 10px 3px 10px;
+	margin: 5px;
+	cursor: pointer;
+	border: 1px solid;
+}
+
+.category:hover {
+	border-color: #00AF33;
+}
+
+.selected {
+	background-color: #00AF33;
+	border-color: #00AF33;
+	color: white;
+}
+
+.unselected {
+	border-color: #D9D9D9;
+}
