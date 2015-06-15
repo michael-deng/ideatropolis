@@ -2,13 +2,14 @@ Rails.application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
   resources :users, only: [:index, :show]
   resources :ideas do
   	resources :comments, only: [:create, :update, :destroy]
   end
   resources :notifications, only: [:index]
+  resources :additional_registrations, only: [:edit, :update]
 
   devise_scope :user do
 	  authenticated :user do

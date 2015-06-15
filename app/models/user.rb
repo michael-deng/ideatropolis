@@ -31,6 +31,7 @@ class User < ActiveRecord::Base
   validates :email, presence: true, length: { maximum: 255 },
   									format: { with: VALID_EMAIL_REGEX },
                     uniqueness: true
+  validates_confirmation_of :password
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
