@@ -1,6 +1,8 @@
 <% provide(:title, "Categories") %>
 
-<ul>
+<div class="heading" style="text-align:center;">Pick a category to discover</div>
+
+<ul class="category-boxes">
   <% for category in @categories %>
     <li><%= link_to category.name, category_path(category) %></li>
   <% end %>

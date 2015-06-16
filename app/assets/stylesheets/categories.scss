@@ -1,3 +1,25 @@
 // Place all the styles related to the categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.category-boxes {
+	list-style-type: none;
+	text-align: center;
+}
+
+.category-boxes li {
+	display: inline-block;
+	width: 12em;
+	text-align: center;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	border: 1px solid #D9D9D9;
+	border-radius: 10px;
+	margin: 0.5em;
+	cursor: pointer;
+}
+
+.category-boxes li a {
+	text-decoration: none;
+	color: black;
+}
