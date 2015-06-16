@@ -1,6 +1,6 @@
 <% provide(:title, "Update your interests") %>
 
-<span class="heading">Interests</span>
+<div class="heading">Choose your interests</div>
 
 <%= form_for @user, url: {action: "update"} do |f| %>
   <%= render 'shared/error_messages', object: f.object %>

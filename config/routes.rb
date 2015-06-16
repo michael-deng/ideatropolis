@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :notifications, only: [:index]
   resources :additional_registrations, only: [:edit, :update]
   resources :category_registrations, only: [:edit, :update]
+  resources :categories, only: [:index, :show]
 
   devise_scope :user do
 	  authenticated :user do
