@@ -16,7 +16,31 @@
   </div>
 
   <div class="field">
-    <%= f.label :pick_1_to_3_categories %>
+    <%= f.label :difficulty %>
+    <ul class="multi-column">
+      <li>
+        <label>
+          <%= f.radio_button :difficulty, "Beginner" %>
+          <%= f.label :beginner %>
+        </label>
+      </li>
+      <li>
+        <label>
+          <%= f.radio_button :difficulty, "Intermediate" %>
+          <%= f.label :intermediate %>
+        </label>
+      </li>
+      <li>
+        <label>
+          <%= f.radio_button :difficulty, "Professional" %>
+          <%= f.label :professional %>
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div class="field">
+    <%= f.label :pick_at_most_3_categories %>
     <ul class="multi-column">
       <% for category in Category.all %>
         <li>

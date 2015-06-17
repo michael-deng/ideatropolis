@@ -1,1 +1,5 @@
-<% provide(:title, "<%= category.name %>") %>
+<% provide(:title, @category.name) %>
+
+<div class="heading"><%= @category.name %></div>
+
+<%= render @category.ideas %>

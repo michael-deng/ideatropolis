@@ -1,7 +1,12 @@
 <% provide(:title, @idea.title) %>
 
 <li class="idea-entry" id="idea-<%= @idea.id %>">
-  <span class="title" style="font-size:200%"><%= @idea.title %></span>
+  <span class="heading"><%= @idea.title %></span>
+  <br />
+  <span class="difficulty"><%= @idea.difficulty %></span><span class="circle"></span>
+  <% for category in @idea.categories %>
+    <span class="category-name"><%= link_to category.name, category_path(category) %></span>
+  <% end %>
   <br />
   <%= link_to image_tag(@idea.user.avatar.url(:icon)), @idea.user %>
   <span class="user"><%= link_to @idea.user.name, @idea.user %></span>
