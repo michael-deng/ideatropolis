@@ -19,6 +19,10 @@
 	cursor: pointer;
 }
 
+.category-boxes li:hover {
+	border: 1px solid #00AF33;
+}
+
 .category-boxes li a {
 	text-decoration: none;
 	color: black;
