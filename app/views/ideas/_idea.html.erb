@@ -1,6 +1,5 @@
 <li class="idea-entry" id="idea-<%= idea.id %>">
-  <span class="small-heading"><%= link_to idea.title, idea_path(idea) %></span>
-  <br />
+  <div class="small-heading"><%= link_to idea.title, idea_path(idea) %></div>
   <% for category in idea.categories %>
     <span class="category-name"><%= category.name %></span>
   <% end %>
