@@ -10,6 +10,7 @@ class Idea < ActiveRecord::Base
   validates :user_id, presence: true
   validates :title, presence: true, length: { maximum: 50 }
   validates :content, presence: true, length: { maximum: 140 }
+  validates :category_ids, presence: true
 
   searchable do
     text :title, :content
