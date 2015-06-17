@@ -14,9 +14,30 @@
     <%= f.label :content %><br />
     <%= f.text_area :content, rows: "10" %>
   </div>
+
+  <div class="field">
+    <%= f.label :categories %>
+    <ul class="multi-column">
+      <% for category in Category.all %>
+        <li>
+          <label>
+            <%= check_box_tag "idea[category_ids][]", category.id %>
+            <%= category.name %>
+          </label>
+        </li>
+      <% end %>
+    </ul>
+  </div>
 	
 	<div class="actions">
     <%= f.submit "Post idea" %>
   </div>
   
 <% end %>
+
+<script>
+  $("input[type=checkbox]").click(function() {
+      var bol = $("input[type=checkbox]:checked").length >= 3;
+      $("input[type=checkbox]").not(":checked").attr("disabled",bol);
+  });
+</script>
