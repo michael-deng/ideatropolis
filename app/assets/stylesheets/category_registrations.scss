@@ -2,11 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.category-holder {
+	text-align: center;
+}
+
 .category {
 	padding: 3px 10px 3px 10px;
 	margin: 5px;
 	cursor: pointer;
 	border: 1px solid #D9D9D9;
+	text-align: center;
 }
 
 .category:hover {

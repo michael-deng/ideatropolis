@@ -1,31 +1,31 @@
 <% provide(:title, "Update your interests") %>
 
-<div class="heading">Choose your interests</div>
+<div class="heading" style="text-align:center;">Choose your interests</div>
 
 <%= form_for @user, url: {action: "update"} do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
-
-  <% for category in Category.all %>
-    <% already_selected = @user.categories.include?(category) %>
-    <% if already_selected %>
-      <label class="category selected">
-        <!-- The hidden field tag allows me to deselect and save empty checkboxes -->
-        <%= hidden_field_tag "user[category_ids][]", '' %>
-        <%= check_box_tag "user[category_ids][]", category.id, already_selected, :style => 'display: none', class: 'checkbox' %>
-        <%= category.name %>
-      </label>
-    <% else %>
-      <label class="category">
-        <!-- The hidden field tag allows me to deselect and save empty checkboxes -->
-        <%= hidden_field_tag "user[category_ids][]", '' %>
-        <%= check_box_tag "user[category_ids][]", category.id, already_selected, style: 'display: none', class: 'checkbox'  %>
-        <%= category.name %>
-      </label>
+  <div class="category-holder">
+    <% for category in Category.all %>
+      <% already_selected = @user.categories.include?(category) %>
+      <% if already_selected %>
+        <label class="category selected">
+          <!-- The hidden field tag allows me to deselect and save empty checkboxes -->
+          <%= hidden_field_tag "user[category_ids][]", '' %>
+          <%= check_box_tag "user[category_ids][]", category.id, already_selected, :style => 'display: none', class: 'checkbox' %>
+          <%= category.name %>
+        </label>
+      <% else %>
+        <label class="category">
+          <!-- The hidden field tag allows me to deselect and save empty checkboxes -->
+          <%= hidden_field_tag "user[category_ids][]", '' %>
+          <%= check_box_tag "user[category_ids][]", category.id, already_selected, style: 'display: none', class: 'checkbox'  %>
+          <%= category.name %>
+        </label>
+      <% end %>
     <% end %>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "Update" %>
+    <div class="actions">
+      <%= f.submit "Update" %>
+    </div>
   </div>
 <% end %>
 
