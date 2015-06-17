@@ -1,7 +1,10 @@
 <li class="idea-entry" id="idea-<%= idea.id %>">
   <span class="small-heading"><%= link_to idea.title, idea_path(idea) %></span>
   <br />
-
+  <% for category in idea.categories %>
+    <span class="category-name"><%= category.name %></span>
+  <% end %>
+  <br />
   <%= link_to image_tag(idea.user.avatar.url(:icon)), idea.user %>
   <span class="user"><%= link_to idea.user.name, idea.user %></span>
   <span class="timestamp">
