@@ -9,8 +9,8 @@ class CategoryRegistrationsController < ApplicationController
 	def update
 		@user = current_user
 		if @user.update_attributes(user_params)
-      flash[:success] = "User updated!"
-      redirect_to @user
+      flash[:success] = "Interests updated!"
+      redirect_to ideas_path
     else
     	flash.now[:error] = "There was an error with your update. Please try again."
       render 'edit'
