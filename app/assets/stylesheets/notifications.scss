@@ -2,9 +2,28 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+/** Notifications **/
+
+.dropdown .dropdown-menu {
+	width: 360px;
+	text-decoration: none;
+	padding: 0;
+}
+
+.dropdown-menu .notification-entry a {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
 .notification-entry {
 	list-style-type: none;
 	line-height: 200%;
+}
+
+.notification-entry hr {
+	margin: 0;
+	padding: 0;
 }
 
 .unread {
@@ -13,6 +32,7 @@
 
 .notification-entry a {
 	text-decoration: none;
+	font-size: 1em;
 	color: black;
 }
 

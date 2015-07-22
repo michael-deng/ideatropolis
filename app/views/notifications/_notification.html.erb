@@ -5,9 +5,9 @@
 <% end %>
 		<%= link_to idea_path(notification.idea, anchor: "comment-#{notification.comment_id}", :notification_id => notification.id) do %>
 		  <!-- <%= image_tag notification.user.avatar.url(:icon) %> -->
-		  <span class="content"><%= notification.content %></span>
-		  <br />
+			<%= image_tag notification.comment.user.avatar.url(:icon) %> <%= notification.content %>
+			<br />
 		  <span class="timestamp"><%= time_ago_in_words(notification.created_at) %> ago</span>
-		  <hr>
 	  <% end %>
+	  <hr>
 	</li>
