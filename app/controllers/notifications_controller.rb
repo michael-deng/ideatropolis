@@ -4,8 +4,13 @@ class NotificationsController < ApplicationController
 
   def index
   	@notifications = current_user.notifications
-  	@notifications.each do |notification|
-  		notification.update_attribute(:read, true)
-  	end
+  	#@notifications.each do |notification|
+  	#	notification.update_attribute(:read, true)
+  	#end
+  end
+
+  def read
+  	@notification = Notification.find(params[:id])
+  	@notification.update_attribute(:read, true)
   end
 end

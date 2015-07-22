@@ -41,6 +41,10 @@ class IdeasController < ApplicationController
   end
 
 	def show
+		if params.has_key?(:notification_id)
+			@notification = Notification.find(params[:notification_id])
+	  	@notification.update_attribute(:read, true)
+	  end
 		@idea = Idea.find(params[:id])
 		@comments = @idea.comments.all
 		@comment = @idea.comments.build
