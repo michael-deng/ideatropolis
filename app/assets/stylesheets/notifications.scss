@@ -12,8 +12,21 @@
 }
 
 .dropdown-menu .notification-entry a {
+	padding-top: 5px;
 	padding-left: 10px;
 	padding-right: 10px;
+	text-decoration: none;
+	font-size: 1em;
+	color: black;
+}
+
+.notification-entry a {
+	text-decoration: none;
+	color: black;
+}
+
+.notification-entry a:hover {
+	color: black;
 }
 
 .notification-entry {
@@ -30,15 +43,9 @@
 	background-color: #E9E9E9;
 }
 
-.notification-entry a {
-	text-decoration: none;
-	font-size: 1em;
-	color: black;
-}
-
-.dropdown-caption {
-	padding-top: 2px;
-	padding-bottom: 3px;
+.dropdown-menu .dropdown-caption a {
+	padding-top: 7px;
+	padding-bottom: 7px;
 }
 
 .no-notifications {
