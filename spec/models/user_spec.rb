@@ -7,12 +7,17 @@ RSpec.describe User, type: :model do
 
   it { should have_many(:ideas) }
   it { should have_many(:comments) }
+  it { should have_many(:notifications) }
 
   it { should validate_presence_of(:name) }
   it { should validate_presence_of(:email) }
 
   it "is invalid if name exceeds 50 letters" do
   	expect(build(:user, name: "a"*51)).to_not be_valid
+  end
+
+  it "is invalid if description exceeds 50 letters" do
+    expect(build(:user, description: "a"*101)).to_not be_valid
   end
 
   it "is invalid if email exceeds 256 letters" do

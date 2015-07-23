@@ -1,21 +1,4 @@
-html {
-	height: 100%;
-	width: 100%;
-}
-
-html body {
-	height: 100%;
-	width: 100%;
-	font-family: 'Lato', sans-serif;
-}
-
-.center-content {
-	height: 100%;
-	width: 100%;
-	padding-left: 5%;
-	padding-right: 5%;
-	padding-top: 20px;
-}
+/** Navbar **/
 
 body .navbar {
 	padding-left: 2em;
@@ -24,10 +7,6 @@ body .navbar {
   border-radius: 0 !important;
   -moz-border-radius: 0 !important;
   -webkit-border-radius: 0 !important;
-}
-
-form input {
-	margin-bottom: 0.5em;
 }
 
 
@@ -39,6 +18,11 @@ body .navbar .navbar-left li a {
 	color: #00AF33;
 	font-size: 1.5em;
 	font-weight: 700;
+}
+
+body .navbar .navbar-left li a:hover {
+	text-decoration: none;
+	color: #00AF33;
 }
 
 

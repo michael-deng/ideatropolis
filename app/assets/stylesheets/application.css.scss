@@ -19,6 +19,31 @@
 
 
 
+/** Big Things **/
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+html body {
+	height: 100%;
+	width: 100%;
+	font-family: 'Lato', sans-serif;
+}
+
+.center-content {
+	height: 100%;
+	width: 100%;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-top: 20px;
+}
+
+
+
+/** General Fields **/
+
 .heading {
 	font-size: 1.8em;
 	margin-bottom: 0.5em;
@@ -38,9 +63,36 @@
 
 
 
-/* Create responsive texts by making all font-size values percentages of these base values */
+/** Forms **/
 
-/* Large desktops and laptops */
+body .center-content form .button {
+	background: none;
+	background-color: #00AF33;
+	border: none;
+	font-family: 'Lato', sans-serif;
+	color: white;
+	text-shadow: none;
+	font-size: 1.1em;
+	font-weight: normal;
+	text-align: center;
+	padding: 0.7em 1em 0.7em 1em;
+	border-radius: 5px;
+}
+
+body .center-content form .button:hover {
+	background: none;
+	background-color: #00AF33;
+}
+
+form input {
+	margin-bottom: 0.5em;
+}
+
+
+
+/** Create responsive texts by making all font-size values percentages of these base values */
+
+/* Large desktops and laptops **/
 @media (min-width: 1150px) {
   body{font-size:16px;}
 }
@@ -67,7 +119,7 @@
 
 
 
-/* Flash messages */
+/** Flash messages **/
 
 .alert-notice {
 	background: #CCEBCC;

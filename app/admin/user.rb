@@ -18,6 +18,7 @@ ActiveAdmin.register User do
     id_column
     column :name
     column :email
+    column :description
     actions
   end
 
@@ -25,6 +26,7 @@ ActiveAdmin.register User do
     f.inputs "User information" do
       f.input :name
       f.input :email
+      f.input :description
     end
     f.actions
   end

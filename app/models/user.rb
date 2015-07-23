@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
          :omniauthable, :omniauth_providers => [:facebook]
 
   has_attached_file :avatar, 
-                        :styles => { :medium => "250x250>", :icon => "25X25>" }, 
+                        :styles => { :medium => "250x250#", :icon => "25X25#" }, 
                         :default_url => "default_:style_avatar.jpg",
                         :storage => :s3,
                         :s3_credentials => {
@@ -32,6 +32,7 @@ class User < ActiveRecord::Base
   									format: { with: VALID_EMAIL_REGEX },
                     uniqueness: true
   validates_confirmation_of :password
+  validates :description, length: { maximum: 100 }
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|

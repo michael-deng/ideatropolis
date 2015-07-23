@@ -5,6 +5,8 @@ FactoryGirl.define do
     title { Faker::Lorem.word }
     content { Faker::Lorem.sentence(5) }
     user
+    category
+    difficulty { "easy" }
 
     factory :idea_with_comment do
 	    after(:create) do |idea|
