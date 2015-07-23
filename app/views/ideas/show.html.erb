@@ -26,9 +26,14 @@
 
 <%= form_for([@idea, @comment]) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
-  <%= f.text_area :content, rows: "5", placeholder: "Compose new comment..." %>
-  <br />
-  <%= f.submit "Post Comment", class: "btn btn-sm button" %>
+  
+  <div class="field">
+    <%= f.text_area :content, rows: "5", placeholder: "Compose new comment..." %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Post Comment", class: "btn btn-sm button" %>
+  </div>
 <% end %>
 
 <br />

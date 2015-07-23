@@ -75,7 +75,7 @@ body .center-content form .button {
 	font-size: 1em;
 	font-weight: normal;
 	text-align: center;
-	padding: 0.7em 1em 0.7em 1em;
+	padding: 0.6em 0.9em 0.6em 0.9em;
 	border-radius: 5px;
 }
 
@@ -83,11 +83,6 @@ body .center-content form .button:hover {
 	background: none;
 	background-color: #00AF33;
 }
-
-form input {
-	margin-bottom: 0.5em;
-}
-
 
 
 /** Create responsive texts by making all font-size values percentages of these base values */
