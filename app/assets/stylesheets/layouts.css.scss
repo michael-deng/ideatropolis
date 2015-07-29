@@ -16,7 +16,7 @@ body .navbar {
 body .navbar .navbar-left li a {
 	text-decoration: none;
 	color: #00AF33;
-	font-size: 1.5em;
+	font-size: 30px;
 	font-weight: 700;
 }
 
@@ -25,12 +25,17 @@ body .navbar .navbar-left li a:hover {
 	color: #00AF33;
 }
 
+body .navbar .navbar-left {
+	margin-right: 50px;
+}
+
 
 
 /** Navbar buttons **/
 
 .navbar .navbar-right li a {
 	text-decoration: none;
+	margin-top: 1px;
 }
 
 
@@ -39,11 +44,13 @@ body .navbar .navbar-left li a:hover {
 
 .searchbar {
 	margin-top: 7px;
-	width: 15em;
+	margin-bottom: 7px;
+	padding-left: 15px;
+	padding-right: 20px;
 }
 
 .searchbar #search {
-	width: 15em;
+	width: 200px;
 	height: 36px;
 }
 

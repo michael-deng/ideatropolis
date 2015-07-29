@@ -13,13 +13,16 @@ Rails.application.routes.draw do
   resources :category_registrations, only: [:edit, :update]
   resources :categories, only: [:index, :show]
 
-  devise_scope :user do
-	  authenticated :user do
-	    root to: 'ideas#index', as: :authenticated_root
-	  end
+  root 'ideas#index'
+  get 'static_pages/landing'
 
-	  unauthenticated do
-	    root to: 'devise/sessions#new', as: :unauthenticated_root
-	  end
-	end
+#  devise_scope :user do
+#	  authenticated :user do
+#	    root to: 'ideas#index', as: :authenticated_root
+#	  end
+#
+#	  unauthenticated do
+#      root to: 'static_pages#landing', as: :unauthenticated_root
+#	  end
+#	end
 end
