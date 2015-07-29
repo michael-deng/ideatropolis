@@ -65,7 +65,7 @@ html body {
 
 /** Forms **/
 
-body .center-content form .button {
+body form .button {
 	background: none;
 	background-color: #00AF33;
 	border: none;
@@ -82,6 +82,14 @@ body .center-content form .button {
 body .center-content form .button:hover {
 	background: none;
 	background-color: #00AF33;
+}
+
+.links {
+	margin-top: 10px;
+}
+
+.links a {
+	text-decoration: none;
 }
 
 

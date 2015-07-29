@@ -1,6 +1,6 @@
 class IdeasController < ApplicationController
 
-	before_action :authenticate_user!
+	before_action :authenticate_user!, except: [:index]
 
 	def new
 		@idea = Idea.new

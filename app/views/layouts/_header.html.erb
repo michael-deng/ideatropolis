@@ -11,8 +11,7 @@
       <% if user_signed_in? %>
         <li class="searchbar">
           <%= form_tag ideas_path, :method => :get do %>
-          <%= text_field_tag :search, params[:search] %>
-          <%= submit_tag "Search", :name => nil %>
+          <%= text_field_tag :search, params[:search], placeholder: "Search" %>
         </li>
         <li><%= link_to "Discover", categories_path %></li>
         <li><%= link_to "Post an idea", new_idea_path %></li>

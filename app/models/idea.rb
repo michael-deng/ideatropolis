@@ -10,7 +10,6 @@ class Idea < ActiveRecord::Base
   validates :user_id, presence: true
   validates :title, presence: true, length: { maximum: 50 }
   validates :content, presence: true, length: { maximum: 500 }
-  validates :category_ids, presence: true
   validates :difficulty, presence: true
 
   DIFFICULTIES = ["Beginner", "Intermediate", "Professional"]

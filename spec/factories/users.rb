@@ -17,5 +17,5 @@ FactoryGirl.define do
         create(:comment, user: user)
       end
     end
-  end  
+  end
 end
