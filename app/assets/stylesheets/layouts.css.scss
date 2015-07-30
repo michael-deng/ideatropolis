@@ -11,7 +11,6 @@ body .navbar {
 
 body .navbar .container-fluid {
 	padding: 0;
-	height: 51px;
 }
 
 @media (max-width: 767px) {
@@ -30,22 +29,20 @@ body .navbar .navbar-nav {
 /** Make Navbar uncollapsible **/
 
 .navbar-collapse.collapse {
-display: block!important;
+	display: block!important;
 }
 
 .navbar-nav>li, .navbar-nav {
-float: left !important;
+	float: left !important;
 }
 
 .navbar-nav.navbar-right:last-child {
-margin-right: -15px !important;
+	margin-right: -15px !important;
 }
 
 .navbar-right {
-float: right!important;
+	float: right!important;
 }
-
-
 
 
 
@@ -57,7 +54,7 @@ body .navbar .navbar-left li a {
 	font-size: 30px;
 	font-weight: 700;
 	padding: 0;
-	margin: 15px 0 0 0;
+	margin: 15px 0 15px 0;
 }
 
 body .navbar .navbar-left li a:hover {
@@ -67,22 +64,22 @@ body .navbar .navbar-left li a:hover {
 
 
 
-
 /** Navbar buttons **/
 
 body .navbar .navbar-right li a {
 	text-decoration: none;
 	color: #696969;
-	padding: 15px 16px 10px;
+	padding: 15px 5px 5px 5px;
+	margin: 0 10px 0 0;
 }
 
 .fa-bell {
 	color: #696969;
-	height: 23px;
+	height: 29px;
 }
 
 .profile {
-	height: 51px;
+	height: 52px;
 }
 
 .profile img {
@@ -95,14 +92,13 @@ body .navbar .navbar-right li a {
 /** Search **/
 
 .searchbar {
-	margin-top: 7px;
-	margin-bottom: 7px;
-	padding-left: 15px;
-	padding-right: 15px;
+	margin-top: 8px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .searchbar #search {
-	width: 200px;
+	width: 180px;
 	height: 36px;
 	padding-left: 30px;
 	background-image: image-url("search.png");
@@ -110,6 +106,3 @@ body .navbar .navbar-right li a {
 	background-repeat: no-repeat;
 	background-position: 8px 10px;
 }
-
-
-
