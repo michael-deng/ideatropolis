@@ -36,19 +36,29 @@ body .navbar .navbar-left {
 
 body .navbar .navbar-right li a {
 	text-decoration: none;
-	margin-top: 1px;
 	color: #696969;
-}
-
-.dropdown {
-	padding-left: 15px;
-	padding-right: 15px;
 	height: 51px;
 }
 
-.fa-bell {
-	margin-top: 18px;
+.dropdown {
+	height: 51px;
+}
+
+.dropdown a {
 	cursor: pointer;
+}
+
+.fa-bell {
+	color: #696969;
+}
+
+.profile {
+	height: 51px;
+}
+
+.profile img {
+	margin-top: -3px;
+	border-radius: 50%;
 }
 
 
