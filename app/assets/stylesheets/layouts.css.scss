@@ -34,9 +34,10 @@ body .navbar .navbar-left {
 
 /** Navbar buttons **/
 
-.navbar .navbar-right li a {
+body .navbar .navbar-right li a {
 	text-decoration: none;
 	margin-top: 1px;
+	color: #696969;
 }
 
 .dropdown {
@@ -65,10 +66,10 @@ body .navbar .navbar-left {
 	width: 200px;
 	height: 36px;
 	padding-left: 30px;
-	background-image: image-url("search3.png");
+	background-image: image-url("search.png");
 	background-size: 15px;
 	background-repeat: no-repeat;
-	background-position: 8px 10px; 
+	background-position: 8px 10px;
 }
 
 
