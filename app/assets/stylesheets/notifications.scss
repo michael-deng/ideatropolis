@@ -11,10 +11,8 @@
 	padding: 0;
 }
 
-.dropdown-menu .notification-entry a {
-	padding-top: 5px;
-	padding-left: 10px;
-	padding-right: 10px;
+.dropdown .dropdown-menu .notification-entry a {
+	padding: 10px 10px 5px 10px;
 	text-decoration: none;
 	font-size: 1em;
 	color: black;
@@ -43,7 +41,7 @@
 	background-color: #E9E9E9;
 }
 
-.dropdown-menu .dropdown-caption a {
+.dropdown .dropdown-menu .dropdown-caption a {
 	padding-top: 7px;
 	padding-bottom: 7px;
 }
