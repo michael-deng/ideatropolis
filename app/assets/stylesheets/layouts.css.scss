@@ -69,7 +69,7 @@ body .navbar .navbar-left li a:hover {
 body .navbar .navbar-right li a {
 	text-decoration: none;
 	color: #696969;
-	padding: 15px 10px 15px 10px;
+	padding: 15px 0.5em 15px 0.5em;
 	margin: 0;
 }
 
@@ -99,17 +99,22 @@ body .navbar .navbar-right li a {
 /** Search **/
 
 .searchbar {
-	margin-top: 7px;
-	padding-left: 16px;
-	padding-right: 16px;
+	margin-top: 9px;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
 }
 
 .searchbar #search {
-	width: 180px;
-	height: 36px;
+	width: 200px;
+	height: 32px;
 	padding-left: 30px;
 	background-image: image-url("search.png");
 	background-size: 15px;
 	background-repeat: no-repeat;
-	background-position: 8px 10px;
+	background-position: 8px 8px;
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .searchbar #search{width:80px;}
 }
