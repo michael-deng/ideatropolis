@@ -93,6 +93,10 @@ body .navbar .navbar-right li a {
 	padding-bottom: 16px;
 }
 
+@media (max-width: 767px) {
+  .fa-bell{padding-bottom:14px;}
+}
+
 .profile a {
 	height: 50px;
 }
@@ -130,5 +134,5 @@ body .navbar .navbar-right li a {
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
-  .searchbar #search{width:140px;}
+  .searchbar #search{width:120px;}
 }
