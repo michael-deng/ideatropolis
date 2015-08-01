@@ -6,7 +6,7 @@
     <ul class="nav navbar-nav navbar-right">
       <li class="searchbar">
         <%= form_tag ideas_path, :method => :get do %>
-          <% text_field_tag :search, params[:search], placeholder: "Search" %>
+          <% text_field_tag :search, params[:search], placeholder: "Search for ideas" %>
         <% end %>
       </li>
       <li><%= link_to "Discover", categories_path %></li>

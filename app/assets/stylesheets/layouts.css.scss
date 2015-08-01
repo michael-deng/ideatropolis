@@ -48,6 +48,10 @@ body .navbar .navbar-nav {
 
 /** Logo **/
 
+body .navbar .navbar-left li {
+	width: 5em;
+}
+
 body .navbar .navbar-left li a {
 	text-decoration: none;
 	color: #00AF33;
@@ -55,6 +59,16 @@ body .navbar .navbar-left li a {
 	font-weight: 700;
 	padding: 0;
 	margin: 15px 0 15px 0;
+}
+
+@media (max-width: 767px) {
+	body .navbar .navbar-left li a {
+		visibility: hidden;
+	}
+	body .navbar .navbar-left li a:before {
+		content: "Ub";
+		visibility: visible;
+	}
 }
 
 body .navbar .navbar-left li a:hover {
@@ -116,5 +130,5 @@ body .navbar .navbar-right li a {
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
-  .searchbar #search{width:80px;}
+  .searchbar #search{width:150px;}
 }
