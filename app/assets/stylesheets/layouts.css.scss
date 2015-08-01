@@ -79,14 +79,19 @@ body .navbar .navbar-right li a {
 	padding-bottom: 16px;
 }
 
-.profile {
+.profile a {
 	height: 50px;
 }
 
-.profile img {
+.profile a img {
 	height: 1.5em;
 	margin-top: -3px;
 	border-radius: 50%;
+}
+
+.dropdown hr {
+	margin: 0;
+	padding: 0;
 }
 
 
