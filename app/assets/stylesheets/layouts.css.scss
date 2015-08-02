@@ -87,14 +87,20 @@ body .navbar .navbar-right li a {
 	margin: 0;
 }
 
-.fa-bell {
+@media (max-width: 767px) {
+  body .navbar .navbar-right li span {
+  	display: none;
+  }
+}
+
+.navbar-right li i {
 	color: #696969;
 	height: 12px;
 	padding-bottom: 16px;
 }
 
-@media (max-width: 767px) {
-  .fa-bell{padding-bottom:14px;}
+.navbar-right li .fa-edit {
+	padding-bottom: 15px;
 }
 
 .profile a {
