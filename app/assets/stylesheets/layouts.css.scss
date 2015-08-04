@@ -14,7 +14,7 @@ body .navbar .container-fluid {
 	padding: 0;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   body .navbar {
   	padding-left: 5%;
   	padding-right: 5%;
@@ -49,26 +49,22 @@ body .navbar .navbar-nav {
 
 /** Logo **/
 
-body .navbar .navbar-left li {
-	width: 3em;
-}
-
 body .navbar .navbar-left li a {
 	text-decoration: none;
 	color: #00AF33;
 	font-size: 30px;
 	font-weight: 700;
 	padding: 0;
-	margin: 15px 0 15px 0;
+	margin: 5px 0 0 0;
 }
 
-@media (max-width: 767px) {
-	body .navbar .navbar-left li a {
-		visibility: hidden;
-	}
-	body .navbar .navbar-left li a:before {
-		content: "Ub";
-		visibility: visible;
+body .navbar .navbar-left li a img {
+	margin-bottom: 5px;
+}
+
+@media (max-width: 991px) {
+	body .navbar .navbar-left li a span {
+		display: none;
 	}
 }
 
@@ -155,8 +151,6 @@ body .navbar .navbar-right li a {
 
 
 
-
-
 /** Search **/
 
 .searchbar {
@@ -177,5 +171,5 @@ body .navbar .navbar-right li a {
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
-  .searchbar #search{width:120px;}
+  .searchbar #search{width:150px;}
 }
