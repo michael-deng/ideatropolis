@@ -7,6 +7,7 @@ body .navbar {
   border-radius: 0 !important;
   -moz-border-radius: 0 !important;
   -webkit-border-radius: 0 !important;
+  height: 52px;
 }
 
 body .navbar .container-fluid {
@@ -103,6 +104,15 @@ body .navbar .navbar-right li a {
 	padding-bottom: 15px;
 }
 
+
+
+/** Dropdown **/
+
+.dropdown .dropdown-menu {
+	text-decoration: none;
+	padding: 0;
+}
+
 .profile a {
 	height: 50px;
 }
@@ -117,6 +127,29 @@ body .navbar .navbar-right li a {
 	margin: 0;
 	padding: 0;
 }
+
+
+
+/** Mobile dropdown ***/
+
+@media (max-width: 767px) {
+  body .dropdown  {
+		width: 35px;
+	}
+
+	body .dropdown.open .dropdown-menu  {
+		position: absolute;
+		background: white;
+		border: 1px solid #BABABA;
+	}
+
+	body .dropdown.open .dropdown-menu li a {
+		padding-left: 10px;
+		height: 36px;
+	}
+}
+
+
 
 
 
