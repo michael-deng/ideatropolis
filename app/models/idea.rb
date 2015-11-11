@@ -10,12 +10,12 @@ class Idea < ActiveRecord::Base
   validates :user_id, presence: true
   validates :title, presence: true, length: { maximum: 50 }
   validates :content, presence: true, length: { maximum: 500 }
-  validates :difficulty, presence: true
   validates :category_ids, presence: true
+  # validates :difficulty, presence: true
 
-  DIFFICULTIES = ["Beginner", "Intermediate", "Professional"]
+  # DIFFICULTIES = ["Beginner", "Intermediate", "Professional"]
   
-  validates_inclusion_of :difficulty, :in => DIFFICULTIES
+  # validates_inclusion_of :difficulty, :in => DIFFICULTIES
 
   searchable do
     text :title, :content
