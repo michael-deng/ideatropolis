@@ -1,65 +1,67 @@
 <% provide(:title, "New Idea") %>
 
-<div class="heading">Post your idea</div>
+<div class="skinny-wrapper">
 
-<%= form_for(@idea) do |f| %>
-	<%= render 'shared/error_messages', object: f.object %>
+  <div class="heading">Post your idea</div>
 
-	<div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title, autofocus: true %>
-  </div>
+  <%= form_for(@idea) do |f| %>
+  	<%= render 'shared/error_messages', object: f.object %>
 
-  <div class="field">
-    <%= f.label :content %><br />
-    <%= f.text_area :content, rows: "10" %>
-  </div>
+  	<div class="field">
+      <%= f.label :title %><br />
+      <%= f.text_field :title, autofocus: true %>
+    </div>
 
-<!--
-  <div class="field">
-    <%= f.label :difficulty %>
-    <ul class="multi-column">
-      <li>
-        <label>
-          <%= f.radio_button :difficulty, "Beginner" %>
-          <%= f.label :beginner %>
-        </label>
-      </li>
-      <li>
-        <label>
-          <%= f.radio_button :difficulty, "Intermediate" %>
-          <%= f.label :intermediate %>
-        </label>
-      </li>
-      <li>
-        <label>
-          <%= f.radio_button :difficulty, "Professional" %>
-          <%= f.label :professional %>
-        </label>
-      </li>
-    </ul>
-  </div>
--->
+    <div class="field">
+      <%= f.label :content %><br />
+      <%= f.text_area :content, rows: "10" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :pick_at_most_3_categories %>
-    <ul class="multi-column">
-      <% for category in Category.all %>
+  <!--
+    <div class="field">
+      <%= f.label :difficulty %>
+      <ul class="multi-column">
         <li>
           <label>
-            <%= check_box_tag "idea[category_ids][]", category.id %>
-            <%= category.name %>
+            <%= f.radio_button :difficulty, "Beginner" %>
+            <%= f.label :beginner %>
           </label>
         </li>
-      <% end %>
-    </ul>
-  </div>
-	
-	<div class="actions">
-    <%= f.submit "Post idea", class: "button" %>
-  </div>
-  
-<% end %>
+        <li>
+          <label>
+            <%= f.radio_button :difficulty, "Intermediate" %>
+            <%= f.label :intermediate %>
+          </label>
+        </li>
+        <li>
+          <label>
+            <%= f.radio_button :difficulty, "Professional" %>
+            <%= f.label :professional %>
+          </label>
+        </li>
+      </ul>
+    </div>
+  -->
+
+    <div class="field">
+      <%= f.label :pick_at_most_3_categories %>
+      <ul class="multi-column">
+        <% for category in Category.all %>
+          <li>
+            <label>
+              <%= check_box_tag "idea[category_ids][]", category.id %>
+              <%= category.name %>
+            </label>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  	
+  	<div class="actions">
+      <%= f.submit "Post idea", class: "button" %>
+    </div>
+  <% end %>
+</div>
 
 <script>
   $("input[type=checkbox]").click(function() {

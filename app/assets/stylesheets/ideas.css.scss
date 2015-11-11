@@ -16,14 +16,35 @@
 	margin: 1em 0 1em 0;
 }
 
+#idea_title, #idea_content {
+	width: 100%;
+}
+
 .multi-column {
+	width: 500px;
 	-moz-column-count: 3;
   -moz-column-gap: 20px;
   -webkit-column-count: 3;
   -webkit-column-gap: 20px;
   column-count: 3;
   column-gap: 20px;
-  font-size: 0.8em;
+}
+
+@media (max-width: 767px) {
+  .multi-column {
+		width: 350px;
+		-moz-column-count: 2;
+	  -moz-column-gap: 20px;
+	  -webkit-column-count: 2;
+	  -webkit-column-gap: 20px;
+	  column-count: 2;
+	  column-gap: 20px;
+	}
+}
+
+.multi-column li label {
+	font-size: 0.9em;
+  font-weight: 400;
 }
 
 .category-name {
@@ -31,7 +52,7 @@
 	margin-right: 0.2em;
 	border-radius: 15px;
 	background-color: #E9E9E9;
-	font-size: 0.8em;
+	font-weight: normal;
 }
 
 .small-heading a {
@@ -64,6 +85,7 @@
 	color: black;
 }
 
+/*
 .circle {
   float: left;
 	margin-top: -0.1em;
@@ -76,7 +98,6 @@
   font-size: 0.7em;
 }
 
-/*
 .difficulty {
 	float: left;
 }

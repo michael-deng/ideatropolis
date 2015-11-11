@@ -47,6 +47,17 @@ html body {
   }
 }
 
+.skinny-wrapper {
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+@media (max-width: 767px) {
+  .skinny-wrapper {
+		padding: 0;
+	}
+}
+
 
 
 /** General Fields **/
