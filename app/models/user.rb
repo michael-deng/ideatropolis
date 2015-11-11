@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
          :omniauthable, :omniauth_providers => [:facebook]
 
   has_attached_file :avatar, 
-                        :styles => { :medium => "250x250#", :icon => "25X25#" }, 
+                        :styles => { :medium => "250x250#", :icon => "20X20#" }, 
                         :default_url => "default_:style_avatar.jpg",
                         :storage => :s3,
                         :s3_credentials => {
