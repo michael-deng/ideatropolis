@@ -42,6 +42,10 @@ class User < ActiveRecord::Base
       # user.image = auth.info.image # assuming the user model has an image
     end
   end
+
+  searchable do
+    text :name
+  end
 end
 
 
