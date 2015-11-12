@@ -36,6 +36,12 @@
 
 @media (max-width: 767px) {
   .multi-column {
+		width: 450px;
+	}
+}
+
+@media (max-width: 480px) {
+  .multi-column {
 		width: 350px;
 		-moz-column-count: 2;
 	  -moz-column-gap: 20px;
