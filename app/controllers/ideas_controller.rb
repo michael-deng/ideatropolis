@@ -52,7 +52,7 @@ class IdeasController < ApplicationController
 
 	def index
 		if params[:search].blank?
-			@ideas = Idea.all.paginate(:page => params[:page])
+			@ideas = Idea.all.page params[:page]
 		else
 			@search = Idea.solr_search do
 				fulltext params[:search]

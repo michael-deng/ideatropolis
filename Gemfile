@@ -20,7 +20,7 @@ gem 'rename'
 gem 'figaro'
 gem "paperclip", "~> 4.2"
 gem 'aws-sdk', '< 2.0'
-gem 'will_paginate', '~> 3.0.6'
+gem 'kaminari'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'

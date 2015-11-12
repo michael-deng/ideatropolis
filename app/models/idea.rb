@@ -4,7 +4,7 @@ class Idea < ActiveRecord::Base
   has_many :comments, dependent: :destroy
   has_many :notifications, dependent: :destroy
   has_and_belongs_to_many :categories
-  self.per_page = 30
+  paginates_per 30
 
   default_scope -> { order(created_at: :desc) }
 
