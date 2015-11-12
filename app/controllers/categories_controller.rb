@@ -6,5 +6,6 @@ class CategoriesController < ApplicationController
 
 	def show
 		@category = Category.find(params[:id])
+		@ideas = @category.ideas.paginate(:page => params[:page])
 	end
 end
