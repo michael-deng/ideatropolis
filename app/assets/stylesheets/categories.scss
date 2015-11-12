@@ -16,6 +16,14 @@
 	border-radius: 10px;
 	margin: 0.5em;
 	cursor: pointer;
+	font-size: 1em;
+}
+
+@media (max-width: 767px) {
+  .category-boxes li {
+  	font-size: 0.8em;
+  	margin: 0.3em;
+  }
 }
 
 .category-boxes li:hover {
@@ -28,4 +36,11 @@
 	padding-bottom: 1.8em;
 	text-decoration: none;
 	color: black;
+}
+
+@media (max-width: 767px) {
+  .category-boxes li a {
+  	padding-top: 1.5em;
+  	padding-bottom: 1.5em;
+  }
 }
