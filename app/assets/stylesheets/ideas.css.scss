@@ -37,7 +37,6 @@
 @media (max-width: 767px) {
   .multi-column {
 		width: 450px;
-		font-size: 0.9em;
 	}
 }
 
@@ -56,6 +55,12 @@
 .multi-column li label {
 	font-size: 0.9em;
   font-weight: 400;
+}
+
+@media (max-width: 767px) {
+  .multi-column li label {
+		font-size: 0.85em;
+	}
 }
 
 .category-name {
