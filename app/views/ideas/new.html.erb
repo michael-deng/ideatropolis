@@ -9,12 +9,22 @@
 
   	<div class="field">
       <%= f.label :title %><br />
-      <%= f.text_field :title, autofocus: true %>
+      <%= f.text_field :title, autofocus: true, maxlength: 50 %>
+    </div>
+
+    <div class="field">
+      <%= f.label :summary %><br />
+      <%= f.text_field :summary, maxlength: 120 %>
+    </div>
+
+    <div class="field">
+      <%= f.label :problem %><br />
+      <%= f.text_field :problem, maxlength: 120 %>
     </div>
 
     <div class="field">
       <%= f.label :content %><br />
-      <%= f.text_area :content, rows: "10" %>
+      <%= f.text_area :content, rows: "10", maxlength: 1500 %>
     </div>
 
   <!--

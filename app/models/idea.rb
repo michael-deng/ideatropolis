@@ -10,7 +10,9 @@ class Idea < ActiveRecord::Base
 
   validates :user_id, presence: true
   validates :title, presence: true, length: { maximum: 50 }
-  validates :content, presence: true, length: { maximum: 500 }
+  validates :summary, presence: true, length: { maximum: 120 }
+  validates :problem, presence: true, length: { maximum: 120 }
+  validates :content, presence: true, length: { maximum: 1500 }
   validates :category_ids, presence: true
   # validates :difficulty, presence: true
 
