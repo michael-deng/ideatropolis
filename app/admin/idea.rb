@@ -1,5 +1,5 @@
 ActiveAdmin.register Idea do
-  permit_params :title, :content
+  permit_params :title, :summary, :problem, :content
 
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
@@ -17,6 +17,8 @@ ActiveAdmin.register Idea do
   index do
     id_column
     column :title
+    column :summary
+    column :problem
     column :content
     actions
   end
@@ -24,6 +26,8 @@ ActiveAdmin.register Idea do
   form do |f|
     f.inputs "Idea information" do
       f.input :title
+      f.input :summary
+      f.input :problem
       f.input :content
     end
     f.actions
