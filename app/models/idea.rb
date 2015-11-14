@@ -9,8 +9,7 @@ class Idea < ActiveRecord::Base
   default_scope -> { order(created_at: :desc) }
 
   validates :user_id, presence: true
-  validates :title, presence: true, length: { maximum: 50 }
-  validates :summary, presence: true, length: { maximum: 120 }
+  validates :title, presence: true, length: { maximum: 100 }
   validates :content, presence: true, length: { maximum: 2000 }
   validates :category_ids, presence: true
   # validates :difficulty, presence: true

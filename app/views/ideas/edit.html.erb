@@ -7,15 +7,15 @@
 
   <div class="field">
     <%= f.label :title %><br />
-    <%= f.text_field :title, autofocus: true, placeholder: @idea.title, maxlength: 50 %>
+    <%= f.text_field :title, autofocus: true, placeholder: @idea.title, maxlength: 100 %>
   </div>
 
+<!--
   <div class="field">
     <%= f.label :summary %><br />
     <%= f.text_field :summary, placeholder: @idea.summary, maxlength: 120 %>
   </div>
 
-<!--
   <div class="field">
     <%= f.label :problem %><br />
     <%= f.text_field :problem, placeholder: @idea.problem, maxlength: 120 %>
@@ -68,6 +68,6 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Update Idea" %>
+    <%= f.submit "Update Idea", class: "button" %>
   </div>
 <% end %>

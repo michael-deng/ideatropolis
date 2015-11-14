@@ -9,15 +9,15 @@
 
   	<div class="field">
       <%= f.label :title %><br />
-      <%= f.text_field :title, autofocus: true, maxlength: 50 %>
-    </div>
-
-    <div class="field">
-      <%= f.label :summary %><br />
-      <%= f.text_field :summary, maxlength: 120 %>
+      <%= f.text_field :title, autofocus: true, maxlength: 100, placeholder: "The name of your idea" %>
     </div>
 
   <!--
+    <div class="field">
+      <%= f.label :summary %><br />
+      <%= f.text_field :summary, maxlength: 120, placeholder: "A one sentence summary of what your idea is" %>
+    </div>
+
     <div class="field">
       <%= f.label :problem %><br />
       <%= f.text_field :problem, maxlength: 120 %>
@@ -26,7 +26,7 @@
 
     <div class="field">
       <%= f.label :content %><br />
-      <%= f.text_area :content, rows: "15", maxlength: 2000 %>
+      <%= f.text_area :content, rows: "15", maxlength: 2000, placeholder: "The problem you're tackling, the audience you're serving, the implementation of your idea, etc." %>
     </div>
 
   <!--
