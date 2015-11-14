@@ -1,20 +1,23 @@
-<li class="idea-entry" id="idea-<%= idea.id %>">
-  <div class="small-heading"><%= link_to idea.title, idea_path(idea) %></div>
-  <!--<span class="difficulty"><%= idea.difficulty %></span><span class="circle"></span>-->  
-  <% for category in idea.categories %>
-    <span class="category-name"><%= link_to category.name, category_path(category) %></span>
-  <% end %>
-  <br />
-  <%= link_to image_tag(idea.user.avatar.url(:icon)), idea.user %>
-  <span class="user"><%= link_to idea.user.name, idea.user %></span>
-  <span class="timestamp">
-    posted <%= time_ago_in_words(idea.created_at) %> ago.
-  </span>
-  <div class="content">
-    <%= truncate(idea.content, length: 190) %>
-    <% if idea.content.length > 190 %>
-      <%= link_to "See more", idea_path(idea) %>
+<div class="idea-entry" id="idea-<%= idea.id %>">
+  <div class="vote"><i class="fa fa-chevron-up"></i><br /><%= idea.get_upvotes.count %></div>
+  <div class="idea-info">
+    <div class="small-heading"><%= link_to idea.title, idea_path(idea) %></div>
+    <!--<span class="difficulty"><%= idea.difficulty %></span><span class="circle"></span>-->  
+    <% for category in idea.categories %>
+      <span class="category-name"><%= link_to category.name, category_path(category) %></span>
     <% end %>
+    <br />
+    <%= link_to image_tag(idea.user.avatar.url(:icon)), idea.user %>
+    <span class="user"><%= link_to idea.user.name, idea.user %></span>
+    <span class="timestamp">
+      posted <%= time_ago_in_words(idea.created_at) %> ago.
+    </span>
+    <div class="content">
+      <%= truncate(idea.content, length: 190) %>
+      <% if idea.content.length > 190 %>
+        <%= link_to "See more", idea_path(idea) %>
+      <% end %>
+    </div>
   </div>
   <hr>
-</li>
+</div>

@@ -21,6 +21,7 @@ gem 'figaro'
 gem "paperclip", "~> 4.2"
 gem 'aws-sdk', '< 2.0'
 gem 'kaminari'
+gem 'acts_as_votable', '~> 0.10.0'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'

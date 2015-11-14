@@ -645,3 +645,69 @@ Nov 14, 2015 8:58:09 AM org.apache.solr.core.SolrCore registerSearcher
 INFO: [default] Registered new searcher Searcher@486b1777 main{StandardDirectoryReader(segments_i:56 _i(4.2):C11/1 _k(4.2):C1)}
 Nov 14, 2015 8:58:09 AM org.apache.solr.update.processor.LogUpdateProcessor finish
 INFO: [default] webapp=/solr path=/update params={wt=ruby} {commit=} 0 126
+Nov 14, 2015 12:18:26 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [default] webapp=/solr path=/update params={wt=ruby} {add=[Idea 2 (1517847635999850496)]} 0 41
+Nov 14, 2015 12:18:26 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+Nov 14, 2015 12:18:26 PM org.apache.solr.core.SolrDeletionPolicy onCommit
+INFO: SolrDeletionPolicy.onCommit: commits:num=2
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/mdeng/rails_projects/unicornbase/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@6e3637b8; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_i,generation=18,filenames=[_k_Lucene41_0.pos, _i.nvd, _k.fdt, _k_Lucene41_0.tim, _k_Lucene41_0.doc, _i.fdt, _i_Lucene41_0.doc, _i_Lucene41_0.tim, _i.fdx, _k.nvd, _i_Lucene41_0.pos, _k.fdx, segments_i, _i.si, _k.si, _k.nvm, _k.fnm, _i_Lucene41_0.tip, _k_Lucene41_0.tip, _i_1.del, _i.nvm, _i.fnm]
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/mdeng/rails_projects/unicornbase/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@6e3637b8; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_j,generation=19,filenames=[_k_Lucene41_0.pos, _l.nvm, _l.fnm, _k_Lucene41_0.tim, _i.fdt, _i_Lucene41_0.doc, _i_2.del, _i.fdx, _k.nvd, _l.fdt, _l_Lucene41_0.doc, _k_Lucene41_0.tip, _i.nvm, _i.fnm, _l.si, _l.fdx, _i.nvd, _k.fdt, _k_Lucene41_0.doc, _i_Lucene41_0.tim, _i_Lucene41_0.pos, _k.fdx, segments_j, _i.si, _l_Lucene41_0.pos, _k.si, _l_Lucene41_0.tip, _k.nvm, _k.fnm, _i_Lucene41_0.tip, _l_Lucene41_0.tim, _l.nvd]
+Nov 14, 2015 12:18:26 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 19[_k_Lucene41_0.pos, _l.nvm, _l.fnm, _k_Lucene41_0.tim, _i.fdt, _i_Lucene41_0.doc, _i_2.del, _i.fdx, _k.nvd, _l.fdt, _l_Lucene41_0.doc, _k_Lucene41_0.tip, _i.nvm, _i.fnm, _l.si, _l.fdx, _i.nvd, _k.fdt, _k_Lucene41_0.doc, _i_Lucene41_0.tim, _i_Lucene41_0.pos, _k.fdx, segments_j, _i.si, _l_Lucene41_0.pos, _k.si, _l_Lucene41_0.tip, _k.nvm, _k.fnm, _i_Lucene41_0.tip, _l_Lucene41_0.tim, _l.nvd]
+Nov 14, 2015 12:18:26 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@208c7ab6 main
+Nov 14, 2015 12:18:26 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
+INFO: Building spell index for spell checker: default
+Nov 14, 2015 12:18:26 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: end_commit_flush
+Nov 14, 2015 12:18:26 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
+INFO: Building spell index for spell checker: example
+Nov 14, 2015 12:18:26 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [default] Registered new searcher Searcher@208c7ab6 main{StandardDirectoryReader(segments_j:59 _i(4.2):C11/2 _k(4.2):C1 _l(4.2):C1)}
+Nov 14, 2015 12:18:26 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [default] webapp=/solr path=/update params={wt=ruby} {commit=} 0 129
+Nov 14, 2015 12:27:41 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [default] webapp=/solr path=/update params={wt=ruby} {add=[Idea 2 (1517848217719406592)]} 0 25
+Nov 14, 2015 12:27:41 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+Nov 14, 2015 12:27:41 PM org.apache.solr.core.SolrDeletionPolicy onCommit
+INFO: SolrDeletionPolicy.onCommit: commits:num=2
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/mdeng/rails_projects/unicornbase/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@6e3637b8; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_j,generation=19,filenames=[_k_Lucene41_0.pos, _l.nvm, _l.fnm, _k_Lucene41_0.tim, _i.fdt, _i_Lucene41_0.doc, _i_2.del, _i.fdx, _k.nvd, _l.fdt, _l_Lucene41_0.doc, _k_Lucene41_0.tip, _i.nvm, _i.fnm, _l.si, _l.fdx, _i.nvd, _k.fdt, _k_Lucene41_0.doc, _i_Lucene41_0.tim, _i_Lucene41_0.pos, _k.fdx, segments_j, _i.si, _l_Lucene41_0.pos, _k.si, _l_Lucene41_0.tip, _k.nvm, _k.fnm, _i_Lucene41_0.tip, _l_Lucene41_0.tim, _l.nvd]
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/mdeng/rails_projects/unicornbase/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@6e3637b8; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_k,generation=20,filenames=[_k_Lucene41_0.pos, _k_Lucene41_0.tim, _m.fdt, _m_Lucene41_0.doc, _i.fdt, _m.fdx, _i_Lucene41_0.doc, _i_2.del, _i.fdx, _k.nvd, _m.nvm, _m.fnm, _k_Lucene41_0.tip, _i.nvm, _i.fnm, _i.nvd, _k.fdt, _m_Lucene41_0.tip, _k_Lucene41_0.doc, _m_Lucene41_0.tim, _i_Lucene41_0.tim, _m_Lucene41_0.pos, _i_Lucene41_0.pos, _k.fdx, _m.nvd, _i.si, _k.si, _k.nvm, _k.fnm, segments_k, _i_Lucene41_0.tip, _m.si]
+Nov 14, 2015 12:27:41 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 20[_k_Lucene41_0.pos, _k_Lucene41_0.tim, _m.fdt, _m_Lucene41_0.doc, _i.fdt, _m.fdx, _i_Lucene41_0.doc, _i_2.del, _i.fdx, _k.nvd, _m.nvm, _m.fnm, _k_Lucene41_0.tip, _i.nvm, _i.fnm, _i.nvd, _k.fdt, _m_Lucene41_0.tip, _k_Lucene41_0.doc, _m_Lucene41_0.tim, _i_Lucene41_0.tim, _m_Lucene41_0.pos, _i_Lucene41_0.pos, _k.fdx, _m.nvd, _i.si, _k.si, _k.nvm, _k.fnm, segments_k, _i_Lucene41_0.tip, _m.si]
+Nov 14, 2015 12:27:41 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@30d0b1ac main
+Nov 14, 2015 12:27:41 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
+INFO: Building spell index for spell checker: default
+Nov 14, 2015 12:27:41 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: end_commit_flush
+Nov 14, 2015 12:27:41 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
+INFO: Building spell index for spell checker: example
+Nov 14, 2015 12:27:41 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [default] Registered new searcher Searcher@30d0b1ac main{StandardDirectoryReader(segments_k:63 _i(4.2):C11/2 _k(4.2):C1 _m(4.2):C1)}
+Nov 14, 2015 12:27:41 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [default] webapp=/solr path=/update params={wt=ruby} {commit=} 0 126
+Nov 14, 2015 12:28:04 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [default] webapp=/solr path=/update params={wt=ruby} {add=[Idea 2 (1517848241926832128)]} 0 5
+Nov 14, 2015 12:28:04 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+Nov 14, 2015 12:28:04 PM org.apache.solr.core.SolrDeletionPolicy onCommit
+INFO: SolrDeletionPolicy.onCommit: commits:num=2
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/mdeng/rails_projects/unicornbase/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@6e3637b8; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_k,generation=20,filenames=[_k_Lucene41_0.pos, _k_Lucene41_0.tim, _m.fdt, _m_Lucene41_0.doc, _i.fdt, _m.fdx, _i_Lucene41_0.doc, _i_2.del, _i.fdx, _k.nvd, _m.nvm, _m.fnm, _k_Lucene41_0.tip, _i.nvm, _i.fnm, _i.nvd, _k.fdt, _m_Lucene41_0.tip, _k_Lucene41_0.doc, _m_Lucene41_0.tim, _i_Lucene41_0.tim, _m_Lucene41_0.pos, _i_Lucene41_0.pos, _k.fdx, _m.nvd, _i.si, _k.si, _k.nvm, _k.fnm, segments_k, _i_Lucene41_0.tip, _m.si]
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.NIOFSDirectory@/Users/mdeng/rails_projects/unicornbase/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@6e3637b8; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_l,generation=21,filenames=[_k_Lucene41_0.pos, _k_Lucene41_0.tim, _i.fdt, _i_Lucene41_0.doc, _i_2.del, _i.fdx, _k.nvd, _n_Lucene41_0.tip, _n_Lucene41_0.tim, _n_Lucene41_0.pos, _n.si, _k_Lucene41_0.tip, _i.nvm, _i.fnm, _n.nvd, _i.nvd, _k.fdt, _k_Lucene41_0.doc, _n.fnm, _n.nvm, _i_Lucene41_0.tim, _i_Lucene41_0.pos, _k.fdx, _i.si, _k.si, _n_Lucene41_0.doc, _k.nvm, _k.fnm, segments_l, _i_Lucene41_0.tip, _n.fdt, _n.fdx]
+Nov 14, 2015 12:28:04 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 21[_k_Lucene41_0.pos, _k_Lucene41_0.tim, _i.fdt, _i_Lucene41_0.doc, _i_2.del, _i.fdx, _k.nvd, _n_Lucene41_0.tip, _n_Lucene41_0.tim, _n_Lucene41_0.pos, _n.si, _k_Lucene41_0.tip, _i.nvm, _i.fnm, _n.nvd, _i.nvd, _k.fdt, _k_Lucene41_0.doc, _n.fnm, _n.nvm, _i_Lucene41_0.tim, _i_Lucene41_0.pos, _k.fdx, _i.si, _k.si, _n_Lucene41_0.doc, _k.nvm, _k.fnm, segments_l, _i_Lucene41_0.tip, _n.fdt, _n.fdx]
+Nov 14, 2015 12:28:04 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@477e379b main
+Nov 14, 2015 12:28:04 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
+INFO: Building spell index for spell checker: default
+Nov 14, 2015 12:28:04 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: end_commit_flush
+Nov 14, 2015 12:28:04 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener buildSpellIndex
+INFO: Building spell index for spell checker: example
+Nov 14, 2015 12:28:04 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [default] Registered new searcher Searcher@477e379b main{StandardDirectoryReader(segments_l:67 _i(4.2):C11/2 _k(4.2):C1 _n(4.2):C1)}
+Nov 14, 2015 12:28:04 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [default] webapp=/solr path=/update params={wt=ruby} {commit=} 0 188

@@ -1,6 +1,6 @@
 <% provide(:title, @idea.title) %>
 
-<li class="idea-entry" id="idea-<%= @idea.id %>">
+<div class="idea-entry" id="idea-<%= @idea.id %>">
   <div class="idea-heading"><%= @idea.title %></div>
   <!--<span class="difficulty"><%= @idea.difficulty %></span><span class="circle"></span>-->
   <% for category in @idea.categories %>
@@ -19,7 +19,7 @@
                                        data: { confirm: "You sure?" } %>
   <% end %>
   <hr>
-</li>
+</div>
 
 <%= form_for([@idea, @comment]) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>

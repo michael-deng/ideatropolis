@@ -4,7 +4,10 @@ class Idea < ActiveRecord::Base
   has_many :comments, dependent: :destroy
   has_many :notifications, dependent: :destroy
   has_and_belongs_to_many :categories
+
   paginates_per 30
+  
+  acts_as_votable
 
   default_scope -> { order(created_at: :desc) }
 

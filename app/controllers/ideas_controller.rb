@@ -61,6 +61,11 @@ class IdeasController < ApplicationController
 		end
 	end
 
+	def upvote
+		@idea = Idea.find(params[:id])
+		@idea.upvote_by current_user
+	end
+
 	private
 
 		def idea_params

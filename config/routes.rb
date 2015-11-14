@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show]
   resources :ideas do
   	resources :comments, only: [:create, :update, :destroy]
+    member do
+      put "like", to: "ideas#upvote"
+      put "dislike", to: "ideas#downvote"
+    end
   end
   resources :notifications, only: [:index]
   resources :additional_registrations, only: [:edit, :update]
