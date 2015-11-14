@@ -10,6 +10,11 @@
   <span class="timestamp">
     posted <%= time_ago_in_words(idea.created_at) %> ago.
   </span>
-  <div class="content"><%= idea.content %></div>
+  <div class="content">
+    <%= truncate(idea.content, length: 190) %>
+    <% if idea.content.length > 190 %>
+      <%= link_to "See more", idea_path(idea) %>
+    <% end %>
+  </div>
   <hr>
 </li>
