@@ -8,8 +8,7 @@ Rails.application.routes.draw do
   resources :ideas do
   	resources :comments, only: [:create, :update, :destroy]
     member do
-      put "like", to: "ideas#upvote"
-      put "dislike", to: "ideas#downvote"
+      put "vote", to: "ideas#vote"
     end
   end
   resources :notifications, only: [:index]

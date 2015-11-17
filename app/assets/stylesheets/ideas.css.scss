@@ -16,23 +16,23 @@
 	}
 }
 
-.idea-heading {
-	font-size: 2em;
-}
-
 .idea-entry hr {
 	margin: 1em 0 1em 0;
 }
 
 .vote {
 	float: left;
-	width: 2.5em;
+	width: 3em;
 	text-align: center;
 	position: relative;
 	margin-top: 2.7em;
 	padding-top: 1em;
 	padding-bottom: 1em;
 	line-height: 1em;
+}
+
+.vote .fa-arrow-up {
+	padding-left: 1px;
 }
 
 @media (max-width: 767px) {
@@ -42,7 +42,7 @@
 }
 
 .idea-info {
-	padding-left: 2.5em;
+	padding-left: 3em;
 }
 
 #idea_title, #idea_summary, #idea_problem, #idea_content {

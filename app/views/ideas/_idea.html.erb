@@ -1,5 +1,11 @@
 <div class="idea-entry" id="idea-<%= idea.id %>">
-  <div class="vote"><i class="fa fa-chevron-up"></i><br /><%= idea.get_upvotes.count %></div>
+  <%= link_to vote_idea_path(idea), method: :put, remote: true do %>
+    <div class="vote">
+      <i class="fa fa-arrow-up"></i>
+      <div class="vote-count"><%= idea.get_likes.size %></div>
+    </div>
+  <% end %>
+
   <div class="idea-info">
     <div class="small-heading"><%= link_to idea.title, idea_path(idea) %></div>
     <!--<span class="difficulty"><%= idea.difficulty %></span><span class="circle"></span>-->  
@@ -13,8 +19,8 @@
       posted <%= time_ago_in_words(idea.created_at) %> ago.
     </span>
     <div class="content">
-      <%= truncate(idea.content, length: 190) %>
-      <% if idea.content.length > 190 %>
+      <%= truncate(idea.content, length: 180) %>
+      <% if idea.content.length > 180 %>
         <%= link_to "See more", idea_path(idea) %>
       <% end %>
     </div>

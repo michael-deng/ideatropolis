@@ -61,9 +61,13 @@ class IdeasController < ApplicationController
 		end
 	end
 
-	def upvote
+	def vote
 		@idea = Idea.find(params[:id])
-		@idea.upvote_by current_user
+		if current_user.voted_for? @idea
+			@idea.unliked_by current_user
+		else
+			@idea.liked_by current_user
+		end
 	end
 
 	private
