@@ -24,7 +24,7 @@
 	font-size: 2em;
 }
 
-.voted, .novote {
+.voted, .novote, .vote {
 	float: left;
 	width: 3em;
 	text-align: center;
@@ -36,7 +36,7 @@
 }
 
 @media (max-width: 767px) {
-  .voted, .novote {
+  .voted, .novote, .vote {
 		margin-top: 1em;
 	}
 }
@@ -45,7 +45,7 @@
 	color: #00AF33;
 }
 
-.novote {
+.novote, .vote {
 	color: black;
 }
 

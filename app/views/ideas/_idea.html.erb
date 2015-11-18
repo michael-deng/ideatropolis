@@ -1,17 +1,24 @@
 <div class="idea-entry" id="idea-<%= idea.id %>">
 
-  <%= link_to vote_idea_path(idea), method: :put, remote: true do %>
-    <% if current_user.voted_for? idea %>
-      <div class="voted">
-        <i class="fa fa-arrow-up"></i>
-        <div class="vote-count"><%= idea.get_likes.size %></div>
-      </div>
-    <% else %>
-      <div class="novote">
-        <i class="fa fa-arrow-up"></i>
-        <div class="vote-count"><%= idea.get_likes.size %></div>
-      </div>
+  <% if user_signed_in? %>
+    <%= link_to vote_idea_path(idea), method: :put, remote: true do %>
+      <% if current_user.voted_for? idea %>
+        <div class="voted">
+          <i class="fa fa-arrow-up"></i>
+          <div class="vote-count"><%= idea.get_likes.size %></div>
+        </div>
+      <% else %>
+        <div class="novote">
+          <i class="fa fa-arrow-up"></i>
+          <div class="vote-count"><%= idea.get_likes.size %></div>
+        </div>
+      <% end %>
     <% end %>
+  <% else %>
+    <div class="vote">
+      <i class="fa fa-arrow-up"></i>
+      <div class="vote-count"><%= idea.get_likes.size %></div>
+    </div>
   <% end %>
 
   <div class="idea-info">
