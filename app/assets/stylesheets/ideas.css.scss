@@ -20,7 +20,11 @@
 	margin: 1em 0 1em 0;
 }
 
-.vote {
+.idea-heading {
+	font-size: 2em;
+}
+
+.voted, .novote {
 	float: left;
 	width: 3em;
 	text-align: center;
@@ -31,14 +35,22 @@
 	line-height: 1em;
 }
 
-.vote .fa-arrow-up {
-	padding-left: 1px;
-}
-
 @media (max-width: 767px) {
-  .vote {
+  .voted, .novote {
 		margin-top: 1em;
 	}
+}
+
+.voted {
+	color: #00AF33;
+}
+
+.novote {
+	color: black;
+}
+
+.fa-arrow-up {
+	padding-left: 1px;
 }
 
 .idea-info {
