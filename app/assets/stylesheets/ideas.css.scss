@@ -22,6 +22,7 @@
 
 .idea-heading {
 	font-size: 2em;
+	margin: 5px 0 5px 0;
 }
 
 .voted, .novote, .vote {
@@ -29,7 +30,7 @@
 	width: 3em;
 	text-align: center;
 	position: relative;
-	margin-top: 2.7em;
+	margin-top: 2.3em;
 	padding-top: 1em;
 	padding-bottom: 1em;
 	line-height: 1em;
@@ -46,11 +47,15 @@
 }
 
 .novote, .vote {
-	color: black;
+	color: #888888;
 }
 
 .fa-arrow-up {
 	padding-left: 1px;
+}
+
+.vote-count {
+	font-weight: 800;
 }
 
 .idea-info {
