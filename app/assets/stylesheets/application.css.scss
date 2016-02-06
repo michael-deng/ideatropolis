@@ -45,11 +45,13 @@ html, body {
 .skinny-wrapper {
 	padding-left: 10%;
 	padding-right: 10%;
+	padding-bottom: 2em;
 }
 
 @media (max-width: 767px) {
   .skinny-wrapper {
-		padding: 0;
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
 

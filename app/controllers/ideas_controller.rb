@@ -9,6 +9,7 @@ class IdeasController < ApplicationController
 	def create
 		@idea = current_user.ideas.build(idea_params)
 		if @idea.save
+			@idea.liked_by current_user
 			flash[:success] = "Idea created!"
 			redirect_to @idea
 		else
