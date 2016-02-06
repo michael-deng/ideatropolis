@@ -18,6 +18,6 @@ module ApplicationHelper
 	    :no_intra_emphasis => true
 	  }
 	  markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, options)
-	  markdown.render(text).html_safe
+	  markdown.render(content).html_safe
 	end
 end
