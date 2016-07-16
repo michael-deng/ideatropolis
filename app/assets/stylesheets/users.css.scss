@@ -7,12 +7,13 @@
 /** Sign up and sign in **/
 
 .signupsignin {
-	width: 100%;
+	width: 25em;
+	margin: auto;
 }
 
-.signupsignin form {
-	width: 30em;
-}
+// .signupsignin form {
+// 	width: 30em;
+// }
 
 .signupsignin form .facebook {
 	background: #3B5999;
@@ -23,7 +24,24 @@
 	border-radius: 5px;
 	display: block;
 	text-align: center;
-	width: 15em;
+}
+
+.signupsignin input {
+	width: 100%;
+}
+
+#user_remember_me {
+	width: 16px;
+	height: 16px;
+	margin: 0;
+}
+
+#user_remember_me:focus {
+	outline: none;
+}
+
+.signupsignin .button {
+	margin-top: 10px;
 }
 
 
