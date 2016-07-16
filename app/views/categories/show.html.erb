@@ -2,4 +2,8 @@
 
 <div class="heading"><%= @category.name %></div>
 
-<%= render @ideas %>
+<% if @ideas.length > 0 %>
+	<%= render @ideas %>
+<% else %>
+	<h4>No ideas in this category yet, we encourage you to sign in and contribute!</h4>
+<% end %>
