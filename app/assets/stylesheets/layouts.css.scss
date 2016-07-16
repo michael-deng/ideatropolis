@@ -176,3 +176,19 @@ body .navbar .navbar-right li a {
 @media (max-width: 767px) {
   .searchbar #search{width:150px;}
 }
+
+
+
+/** Footer **/
+
+.footer {
+	text-align: center;
+	color: #A0A0A0;
+	padding: 16px 10px 36px 10px;
+	font-size: 0.9em;
+}
+
+.footer a {
+	color: #A0A0A0;
+	text-decoration: underline;
+}
