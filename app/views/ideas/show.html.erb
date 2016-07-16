@@ -18,16 +18,20 @@
   <hr>
 </div>
 
-<%= form_for([@idea, @comment]) do |f| %>
-  <%= render 'shared/error_messages', object: f.object %>
-  
-  <div class="field">
-    <%= f.text_area :content, rows: "5", placeholder: "Compose new comment..." %>
-  </div>
+<% if user_signed_in? %>
+  <%= form_for([@idea, @comment]) do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+    
+    <div class="field">
+      <%= f.text_area :content, rows: "5", placeholder: "Compose new comment..." %>
+    </div>
 
-  <div class="actions">
-    <%= f.submit "Post Comment", class: "btn btn-sm button" %>
-  </div>
+    <div class="actions">
+      <%= f.submit "Post Comment", class: "btn btn-sm button" %>
+    </div>
+  <% end %>
+<% else %>
+  <div><%= link_to "You have to sign in to post comments", new_user_session_path %></div>
 <% end %>
 
 <br />

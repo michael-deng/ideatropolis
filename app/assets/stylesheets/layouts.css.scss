@@ -83,7 +83,7 @@ body .navbar .navbar-left li a:hover {
 body .navbar .navbar-right li a {
 	text-decoration: none;
 	color: #696969;
-	padding: 15px 0.5em 15px 0.5em;
+	padding: 15px 0 15px 1em;
 	margin: 0;
 }
 
@@ -101,6 +101,10 @@ body .navbar .navbar-right li a {
 
 .navbar-right li .fa-edit {
 	padding-bottom: 15px;
+}
+
+.navbar-nav.navbar-right:last-child {
+	margin-right: 0 !important;
 }
 
 
@@ -170,6 +174,14 @@ body .navbar .navbar-right li a {
 	background-size: 15px;
 	background-repeat: no-repeat;
 	background-position: 8px 8px;
+	border-radius: 5px;
+	box-shadow: none;
+	border: 1px solid #B0B0B0;
+}
+
+.searchbar #search:focus{
+  outline: none;
+  border: 1px solid #707070;
 }
 
 /* Landscape phones and portrait tablets */

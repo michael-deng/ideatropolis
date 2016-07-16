@@ -76,6 +76,16 @@ html, body {
 	font-size: 0.8em;
 }
 
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: black;
+}
+
 
 
 /** Forms **/
@@ -101,10 +111,6 @@ body .center-content form .button:hover {
 
 .links {
 	margin-top: 10px;
-}
-
-.links a {
-	text-decoration: none;
 }
 
 #cancel-button {
@@ -142,12 +148,12 @@ body .center-content form .button:hover {
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
-  body{font-size:15px;}
+  body{font-size:14px;}
 }
 
 /* Landscape phones and smaller */
 @media (max-width: 480px) {
-  body{font-size:14px;}
+  body{font-size:12px;}
 }
 
 
