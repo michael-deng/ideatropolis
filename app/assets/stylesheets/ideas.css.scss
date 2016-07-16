@@ -67,6 +67,8 @@
 }
 
 .multi-column {
+	list-style-type: none;
+	padding: 0;
 	width: 500px;
 	-moz-column-count: 3;
   -moz-column-gap: 20px;
@@ -103,6 +105,11 @@
   .multi-column li label {
 		font-size: 0.85em;
 	}
+}
+
+.multi-column input {
+	width: 1em;
+	height: 1em;
 }
 
 .category-name {

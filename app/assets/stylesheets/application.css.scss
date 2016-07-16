@@ -119,6 +119,7 @@ body .center-content form .button:hover {
 
 .links {
 	margin-top: 10px;
+	font-size: 1.1em;
 }
 
 #cancel-button {
@@ -133,6 +134,10 @@ body .center-content form .button:hover {
 	text-align: center;
 	padding: 0.6em 0.9em 0.6em 0.9em;
 	border-radius: 5px;
+}
+
+textarea {
+	border: 2px solid #E0E0E0;
 }
 
 
