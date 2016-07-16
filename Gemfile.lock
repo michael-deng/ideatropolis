@@ -242,7 +242,7 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (= 0.3.0)
-    pg (0.17.1)
+    pg (0.18.4)
     polyamorous (1.2.0)
       activerecord (>= 3.0)
     pr_geohash (1.0.0)
@@ -406,7 +406,7 @@ DEPENDENCIES
   minitest-reporters (= 1.0.5)
   omniauth-facebook
   paperclip (~> 4.2)
-  pg (= 0.17.1)
+  pg (= 0.18.4)
   progress_bar
   rails (= 4.2.0)
   rails_12factor
@@ -423,6 +423,3 @@ DEPENDENCIES
   turbolinks (= 2.3.0)
   uglifier (= 2.5.3)
   web-console (= 2.0.0.beta3)
-
-BUNDLED WITH
-   1.10.6
